@@ -1,0 +1,17 @@
+{
+  "name": "paysage-gd-2",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "markdown-it": "^12.2.0",
+    "markdown-it-meta": "^0.0.1",
+    "markdown-it-oembed": "^1.1.0"
+  }
+}
