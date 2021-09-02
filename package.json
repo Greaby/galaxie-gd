@@ -10,8 +10,11 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "graphology": "^0.21.0",
+    "graphology-layout-forceatlas2": "^0.6.1",
     "markdown-it": "^12.2.0",
     "markdown-it-meta": "^0.0.1",
-    "markdown-it-oembed": "^1.1.0"
+    "markdown-it-oembed": "^1.1.0",
+    "slugify": "^1.6.0"
   }
 }

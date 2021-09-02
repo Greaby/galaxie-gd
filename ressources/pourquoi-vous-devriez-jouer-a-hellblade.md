@@ -1,17 +1,17 @@
 ---
 title: Pourquoi vous devriez jouer à HELLBLADE
 tags:
-  [
-    ninja-theory,
-    schizophrenie,
-    microsoft,
-    hellblade-senua-sacrifice,
-    son-binaural,
-    mythologie-nordique,
-    atmosphere,
-    maladie,
-  ]
-authors: [nostalgeek]
+    [
+        Ninja Theory,
+        Schizophrénie,
+        Microsoft,
+        "Hellblade: Senu's sacrifice",
+        Son binaural,
+        Mythologie nordique,
+        Atmosphère,
+        Maladie,
+    ]
+authors: [Nostalgeek]
 ---
 
 https://www.youtube.com/watch?v=xGf6aVANsY0

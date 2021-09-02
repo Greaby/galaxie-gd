@@ -1,8 +1,13 @@
 ---
 title: Le Jeu Vidéo, Allié des temps difficiles
 tags:
-    [soutien-psychologique, animal-crossing-new-horizons, among-us, outer-wilds]
-authors: [nostalgeek]
+    [
+        "Soutien Psychologique",
+        "Animal Crossing: New Horizons",
+        Among Us,
+        Outer Wilds,
+    ]
+authors: [Nostalgeek]
 ---
 
 ![youtube](https://www.youtube.com/watch?v=maGRe4Pa1yg)

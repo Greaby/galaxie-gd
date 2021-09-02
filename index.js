@@ -3,9 +3,14 @@ const MarkdownIt = require("markdown-it");
 const MarkdownItOEmbed = require("markdown-it-oembed");
 const meta = require("markdown-it-meta");
 const { parse } = require("querystring");
+const slugify = require("slugify");
+const Graph = require("graphology");
+const forceAtlas2 = require("graphology-layout-forceatlas2");
 
-const DIRNAME = "ressources/";
-const DIR_DIST = "dist/";
+const DIR_DIST = "dist";
+const DIR_RESSOURCE = "ressources";
+
+const BASE_SIZE = 10;
 
 let id = 0;
 let getID = () => {
@@ -13,22 +18,42 @@ let getID = () => {
     return id;
 };
 
-let parseFiles = async () => {
+let getTagID = (title) => {
+    const slug = slugify(title, { lower: true });
+    return `t:${slug}`;
+};
+
+let getAuthorID = (title) => {
+    const slug = slugify(title, { lower: true });
+    return `a:${slug}`;
+};
+
+let getRessourceID = (title) => {
+    const slug = slugify(title, { lower: true });
+    return `r:${slug}`;
+};
+
+const initDistFolder = () => {
+    // Init dist structure
     if (fs.existsSync(DIR_DIST)) {
         fs.rmdirSync(DIR_DIST, { recursive: true });
     }
-
     fs.mkdirSync(DIR_DIST);
+    fs.mkdirSync(DIR_DIST + "/" + DIR_RESSOURCE);
+};
 
-    const fileNames = await fs.promises.readdir(DIRNAME);
-    console.log(fileNames);
+const parseFiles = async () => {
+    const graph = new Graph();
 
-    let edges = [];
-    let nodes = {};
+    const fileNames = await fs.promises.readdir(DIR_RESSOURCE);
+
     for (let index = 0; index < fileNames.length; index++) {
         const fileName = fileNames[index].replace(".md", "");
+
+        console.log(`parse ${fileName}`);
+
         const content = await fs.promises.readFile(
-            DIRNAME + fileName + ".md",
+            `${DIR_RESSOURCE}/${fileName}.md`,
             "utf-8"
         );
 
@@ -44,59 +69,70 @@ let parseFiles = async () => {
         rendered = `<h2>${md.meta.title}</h2>${rendered}`;
 
         // save html file
-        fs.writeFile(DIR_DIST + fileName + ".html", rendered, function (err) {
+        fs.writeFile(`${DIR_DIST}/${fileName}.html`, rendered, function (err) {
             if (err) return console.log(err);
         });
 
-        nodes["r:" + fileName] = {
-            label: md.meta.title,
-            id: "r:" + fileName,
-            x: Math.floor(Math.random() * 100),
-            y: Math.floor(Math.random() * 100),
-            size: 16,
-        };
+        let ressourceID = getRessourceID(fileName);
 
-        md.meta.authors.forEach((author) => {
-            nodes["a:" + author] = {
-                label: author,
-                id: "a:" + author,
+        if (!graph.hasNode(ressourceID)) {
+            console.log(`add node ${ressourceID}`);
+            graph.addNode(ressourceID, {
+                label: md.meta.title,
                 x: Math.floor(Math.random() * 100),
                 y: Math.floor(Math.random() * 100),
-                size: 16,
-            };
-
-            edges.push({
-                source: "r:" + fileName,
-                target: "a:" + author,
-                id: getID(),
             });
+        }
+
+        md.meta.authors.forEach((author) => {
+            let authorID = getAuthorID(author);
+            if (!graph.hasNode(authorID)) {
+                graph.addNode(authorID, {
+                    label: author,
+                    x: Math.floor(Math.random() * 100),
+                    y: Math.floor(Math.random() * 100),
+                });
+            }
+
+            graph.addEdge(ressourceID, authorID);
         });
 
         md.meta.tags.forEach((tag) => {
-            nodes["t:" + tag] = {
-                label: tag,
-                id: "t:" + tag,
-                x: Math.floor(Math.random() * 100),
-                y: Math.floor(Math.random() * 100),
-                size: 16,
-            };
-            edges.push({
-                source: "r:" + fileName,
-                target: "t:" + tag,
-                id: getID(),
-            });
+            const tagID = getTagID(tag);
+            if (!graph.hasNode(tagID)) {
+                console.log(`add node ${tagID}`);
+                graph.addNode(tagID, {
+                    label: tag,
+                    x: Math.floor(Math.random() * 100),
+                    y: Math.floor(Math.random() * 100),
+                });
+            }
+            graph.addEdge(ressourceID, tagID);
         });
     }
 
-    console.log(edges);
+    const positions = forceAtlas2(graph, { iterations: 500 });
+
+    graph.forEachNode((node) => {
+        graph.updateNode(node, (attr) => {
+            return {
+                ...attr,
+                size: BASE_SIZE * Math.sqrt(graph.degree(node)),
+                x: positions[node].x,
+                y: positions[node].y,
+            };
+        });
+    });
 
     fs.writeFile(
-        DIR_DIST + "graph" + ".json",
-        JSON.stringify({ edges: edges, nodes: Object.values(nodes) }),
+        `${DIR_DIST}/graph.json`,
+        JSON.stringify(graph.export()),
         function (err) {
             if (err) return console.log(err);
         }
     );
 };
+
+initDistFolder();
 parseFiles();
 return;

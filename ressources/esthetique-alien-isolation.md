@@ -1,7 +1,7 @@
 ---
 title: L'Esthétique d'Alien Isolation
-tags: [alien-isolation]
-authors: [nostalgeek]
+tags: [Alien Isolation]
+authors: [Nostalgeek]
 ---
 
 ![youtube](https://www.youtube.com/watch?v=0Wjalv4D4WI)
