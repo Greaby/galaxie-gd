@@ -1,6 +1,6 @@
 ---
 title: L'Esthétique d'Alien Isolation
-tags: [Alien Isolation]
+tags: ["Alien: Isolation"]
 authors: [Nostalgeek]
 ---
 

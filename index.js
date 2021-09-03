@@ -13,30 +13,37 @@ const DIR_RESSOURCE = "ressources";
 const BASE_SIZE = 10;
 
 let id = 0;
-let getID = () => {
+let node_ids = [];
+let getID = (node_name = null) => {
+    if (node_name !== null && node_ids[node_name] !== undefined) {
+        return node_ids[node_name];
+    }
+
     id += 1;
-    return id;
+
+    node_ids[node_name] = id.toString();
+    return node_ids[node_name];
 };
 
 let getTagID = (title) => {
-    const slug = slugify(title, { lower: true });
-    return `t:${slug}`;
+    const slug = `t:${slugify(title, { lower: true })}`;
+    return [slug, getID(slug)];
 };
 
 let getAuthorID = (title) => {
-    const slug = slugify(title, { lower: true });
-    return `a:${slug}`;
+    const slug = `a:${slugify(title, { lower: true })}`;
+    return [slug, getID(slug)];
 };
 
 let getRessourceID = (title) => {
-    const slug = slugify(title, { lower: true });
-    return `r:${slug}`;
+    const slug = `r:${slugify(title, { lower: true })}`;
+    return [slug, getID(slug)];
 };
 
 const initDistFolder = () => {
     // Init dist structure
     if (fs.existsSync(DIR_DIST)) {
-        fs.rmdirSync(DIR_DIST, { recursive: true });
+        fs.rmSync(DIR_DIST, { recursive: true });
     }
     fs.mkdirSync(DIR_DIST);
     fs.mkdirSync(DIR_DIST + "/" + DIR_RESSOURCE);
@@ -47,6 +54,7 @@ const parseFiles = async () => {
 
     const fileNames = await fs.promises.readdir(DIR_RESSOURCE);
 
+    let citations = [];
     for (let index = 0; index < fileNames.length; index++) {
         const fileName = fileNames[index].replace(".md", "");
 
@@ -73,47 +81,61 @@ const parseFiles = async () => {
             if (err) return console.log(err);
         });
 
-        let ressourceID = getRessourceID(fileName);
+        let [slug, ressourceID] = getRessourceID(fileName);
 
         if (!graph.hasNode(ressourceID)) {
-            console.log(`add node ${ressourceID}`);
+            console.log(`add node ${slug}`);
             graph.addNode(ressourceID, {
                 label: md.meta.title,
                 x: Math.floor(Math.random() * 100),
                 y: Math.floor(Math.random() * 100),
+                slug: slug,
+            });
+        }
+
+        if (md.meta.citations) {
+            md.meta.citations.forEach((citation) => {
+                citations.push([ressourceID, getID(citation)]);
             });
         }
 
         md.meta.authors.forEach((author) => {
-            let authorID = getAuthorID(author);
+            let [slug, authorID] = getAuthorID(author);
             if (!graph.hasNode(authorID)) {
+                console.log(`add node ${slug}`);
                 graph.addNode(authorID, {
                     label: author,
                     x: Math.floor(Math.random() * 100),
                     y: Math.floor(Math.random() * 100),
+                    slug: slug,
                 });
             }
 
-            graph.addEdge(ressourceID, authorID);
+            graph.addEdge(authorID, ressourceID);
         });
 
         md.meta.tags.forEach((tag) => {
-            const tagID = getTagID(tag);
+            const [slug, tagID] = getTagID(tag);
             if (!graph.hasNode(tagID)) {
-                console.log(`add node ${tagID}`);
+                console.log(`add node ${slug}`);
                 graph.addNode(tagID, {
                     label: tag,
                     x: Math.floor(Math.random() * 100),
                     y: Math.floor(Math.random() * 100),
+                    slug: slug,
                 });
             }
             graph.addEdge(ressourceID, tagID);
         });
     }
 
+    /*citations.forEach(([source, target]) => {
+        graph.addEdge(source, target);
+    });*/
+
     const positions = forceAtlas2(graph, { iterations: 500 });
 
-    graph.forEachNode((node) => {
+    /*graph.forEachNode((node) => {
         graph.updateNode(node, (attr) => {
             return {
                 ...attr,
@@ -122,11 +144,41 @@ const parseFiles = async () => {
                 y: positions[node].y,
             };
         });
+    });*/
+
+    let nodes = [];
+    graph.forEachNode((node, attributes) => {
+        nodes.push({
+            id: node,
+            label: attributes.label,
+            size: BASE_SIZE * Math.sqrt(graph.degree(node)),
+            x: positions[node].x,
+            y: positions[node].y,
+            slug: attributes.slug,
+        });
     });
+
+    let edges = [];
+    graph.forEachEdge(
+        (
+            edge,
+            attributes,
+            source,
+            target,
+            sourceAttributes,
+            targetAttributes
+        ) => {
+            edges.push({
+                id: getID(),
+                source: source,
+                target: target,
+            });
+        }
+    );
 
     fs.writeFile(
         `${DIR_DIST}/graph.json`,
-        JSON.stringify(graph.export()),
+        JSON.stringify({ nodes: nodes, edges: edges }),
         function (err) {
             if (err) return console.log(err);
         }

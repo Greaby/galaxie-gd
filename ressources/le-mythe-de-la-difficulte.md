@@ -1,6 +1,6 @@
 ---
 title: Le Mythe de la Difficulté
-tags: [Difficulté]
+tags: [Difficulté, Dark Souls]
 authors: [Nostalgeek]
 ---
 

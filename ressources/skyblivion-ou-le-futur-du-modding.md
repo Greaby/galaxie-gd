@@ -1,6 +1,22 @@
 ---
 title: Skyblivion ou le futur du Modding
-tags: [Skyrim, Modding, Skyblivion]
+tags:
+    [
+        The Elder Scrolls,
+        Skyrim,
+        Modding,
+        Skyblivion,
+        Skywind,
+        Oblivion,
+        RPG,
+        Remake,
+        Rebelzize,
+        Bethesda,
+        Morrowind,
+        Open World,
+        Level Design,
+        Game Design,
+    ]
 authors: [Nostalgeek]
 ---
 

@@ -10,6 +10,7 @@ tags:
         Mythologie nordique,
         Atmosphère,
         Maladie,
+        Folie,
     ]
 authors: [Nostalgeek]
 ---
