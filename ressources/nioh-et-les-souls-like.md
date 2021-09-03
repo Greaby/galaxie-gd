@@ -13,7 +13,7 @@ tags:
         Difficulté,
     ]
 authors: [Nostalgeek]
-citations: ["r:le-mythe-de-la-difficulte"]
+citations: ["ressource-le-mythe-de-la-difficulte"]
 ---
 
 ![youtube](https://www.youtube.com/watch?v=yfrJW49aSdk)

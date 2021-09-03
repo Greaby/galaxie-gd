@@ -10,7 +10,7 @@ const forceAtlas2 = require("graphology-layout-forceatlas2");
 const DIR_DIST = "dist";
 const DIR_RESSOURCE = "ressources";
 
-const BASE_SIZE = 10;
+const BASE_SIZE = 5;
 
 let id = 0;
 let node_ids = [];
@@ -26,18 +26,54 @@ let getID = (node_name = null) => {
 };
 
 let getTagID = (title) => {
-    const slug = `t:${slugify(title, { lower: true })}`;
+    const slug = `tag-${slugify(title, { lower: true, strict: true })}`;
     return [slug, getID(slug)];
 };
 
 let getAuthorID = (title) => {
-    const slug = `a:${slugify(title, { lower: true })}`;
+    const slug = `author-${slugify(title, { lower: true, strict: true })}`;
     return [slug, getID(slug)];
 };
 
 let getRessourceID = (title) => {
-    const slug = `r:${slugify(title, { lower: true })}`;
+    const slug = `ressource-${slugify(title, { lower: true, strict: true })}`;
     return [slug, getID(slug)];
+};
+
+let generateSigmaJSON = (graph) => {
+    const positions = forceAtlas2(graph, { iterations: 500 });
+
+    let nodes = [];
+    graph.forEachNode((node, attributes) => {
+        nodes.push({
+            id: node,
+            label: attributes.label,
+            size: BASE_SIZE * Math.sqrt(graph.degree(node)),
+            x: positions[node].x,
+            y: positions[node].y,
+            slug: attributes.slug,
+        });
+    });
+
+    let edges = [];
+    graph.forEachEdge(
+        (
+            edge,
+            attributes,
+            source,
+            target,
+            sourceAttributes,
+            targetAttributes
+        ) => {
+            edges.push({
+                id: getID(),
+                source: source,
+                target: target,
+            });
+        }
+    );
+
+    return { nodes: nodes, edges: edges };
 };
 
 const initDistFolder = () => {
@@ -46,7 +82,6 @@ const initDistFolder = () => {
         fs.rmSync(DIR_DIST, { recursive: true });
     }
     fs.mkdirSync(DIR_DIST);
-    fs.mkdirSync(DIR_DIST + "/" + DIR_RESSOURCE);
 };
 
 const parseFiles = async () => {
@@ -76,12 +111,12 @@ const parseFiles = async () => {
 
         rendered = `<h2>${md.meta.title}</h2>${rendered}`;
 
+        let [slug, ressourceID] = getRessourceID(fileName);
+
         // save html file
-        fs.writeFile(`${DIR_DIST}/${fileName}.html`, rendered, function (err) {
+        fs.writeFile(`${DIR_DIST}/${slug}.html`, rendered, function (err) {
             if (err) return console.log(err);
         });
-
-        let [slug, ressourceID] = getRessourceID(fileName);
 
         if (!graph.hasNode(ressourceID)) {
             console.log(`add node ${slug}`);
@@ -125,64 +160,55 @@ const parseFiles = async () => {
                     slug: slug,
                 });
             }
-            graph.addEdge(ressourceID, tagID);
+            graph.addEdge(tagID, ressourceID);
         });
     }
 
-    /*citations.forEach(([source, target]) => {
+    citations.forEach(([source, target]) => {
         graph.addEdge(source, target);
-    });*/
-
-    const positions = forceAtlas2(graph, { iterations: 500 });
-
-    /*graph.forEachNode((node) => {
-        graph.updateNode(node, (attr) => {
-            return {
-                ...attr,
-                size: BASE_SIZE * Math.sqrt(graph.degree(node)),
-                x: positions[node].x,
-                y: positions[node].y,
-            };
-        });
-    });*/
-
-    let nodes = [];
-    graph.forEachNode((node, attributes) => {
-        nodes.push({
-            id: node,
-            label: attributes.label,
-            size: BASE_SIZE * Math.sqrt(graph.degree(node)),
-            x: positions[node].x,
-            y: positions[node].y,
-            slug: attributes.slug,
-        });
     });
 
-    let edges = [];
-    graph.forEachEdge(
-        (
-            edge,
-            attributes,
-            source,
-            target,
-            sourceAttributes,
-            targetAttributes
-        ) => {
-            edges.push({
-                id: getID(),
-                source: source,
-                target: target,
-            });
-        }
-    );
-
+    // save main graph
     fs.writeFile(
         `${DIR_DIST}/graph.json`,
-        JSON.stringify({ nodes: nodes, edges: edges }),
+        JSON.stringify(generateSigmaJSON(graph)),
         function (err) {
             if (err) return console.log(err);
         }
     );
+
+    // save sub graphs
+    graph.forEachNode((node, attributes) => {
+        const subGraph = new Graph();
+
+        subGraph.addNode(node, attributes);
+
+        graph.forEachNeighbor(node, function (neighbor, attributes) {
+            if (!subGraph.hasNode(neighbor)) {
+                subGraph.addNode(neighbor, attributes);
+            }
+            subGraph.addEdge(node, neighbor);
+
+            graph.forEachNeighbor(
+                neighbor,
+                function (secondNeighbor, attributes) {
+                    if (!subGraph.hasNode(secondNeighbor)) {
+                        subGraph.addNode(secondNeighbor, attributes);
+                    }
+
+                    subGraph.addEdge(neighbor, secondNeighbor);
+                }
+            );
+        });
+
+        fs.writeFile(
+            `${DIR_DIST}/${attributes.slug}.json`,
+            JSON.stringify(generateSigmaJSON(subGraph)),
+            function (err) {
+                if (err) return console.log(err);
+            }
+        );
+    });
 };
 
 initDistFolder();
