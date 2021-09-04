@@ -10,7 +10,7 @@ const forceAtlas2 = require("graphology-layout-forceatlas2");
 const DIR_DIST = "dist";
 const DIR_RESSOURCE = "ressources";
 
-const BASE_SIZE = 5;
+const BASE_SIZE = 3;
 
 let id = 0;
 let node_ids = [];
@@ -41,7 +41,10 @@ let getRessourceID = (title) => {
 };
 
 let generateSigmaJSON = (graph) => {
-    const positions = forceAtlas2(graph, { iterations: 500 });
+    const positions = forceAtlas2(graph, {
+        iterations: 1000,
+        adjustSizes: true,
+    });
 
     let nodes = [];
     graph.forEachNode((node, attributes) => {
