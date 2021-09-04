@@ -16,4 +16,4 @@ authors: [Nostalgeek]
 citations: ["ressource-le-mythe-de-la-difficulte"]
 ---
 
-![youtube](https://www.youtube.com/watch?v=yfrJW49aSdk)
+@[youtube](https://www.youtube.com/watch?v=yfrJW49aSdk)

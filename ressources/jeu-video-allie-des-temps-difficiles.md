@@ -10,4 +10,4 @@ tags:
 authors: [Nostalgeek]
 ---
 
-![youtube](https://www.youtube.com/watch?v=maGRe4Pa1yg)
+@[youtube](https://www.youtube.com/watch?v=maGRe4Pa1yg)

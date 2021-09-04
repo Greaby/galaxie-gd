@@ -20,4 +20,4 @@ tags:
 authors: [Nostalgeek]
 ---
 
-![youtube](https://www.youtube.com/watch?v=v9y89CTtijI)
+@[youtube](https://www.youtube.com/watch?v=v9y89CTtijI)

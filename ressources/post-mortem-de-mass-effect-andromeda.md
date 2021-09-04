@@ -4,4 +4,4 @@ tags: [Mass Effect, Mass Effect Andromeda]
 authors: [Nostalgeek]
 ---
 
-![youtube](https://www.youtube.com/watch?v=vQKBl2er32o)
+@[youtube](https://www.youtube.com/watch?v=vQKBl2er32o)

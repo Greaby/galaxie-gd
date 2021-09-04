@@ -17,4 +17,4 @@ tags:
 authors: [Nostalgeek]
 ---
 
-![youtube](https://www.youtube.com/watch?v=WIuB9WaI1bA)
+@[youtube](https://www.youtube.com/watch?v=WIuB9WaI1bA)
