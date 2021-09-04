@@ -1,3 +1,45 @@
+/* BASE */
+@import "partials/base/theme";
+@import "partials/base/reset";
+@import "partials/base/mixins";
+@import "partials/base/variables";
+@import "partials/base/typography";
+@import "partials/base/base";
+@import "partials/base/keyframes";
+
+/* LAYOUT */
+@import "partials/layout/titles";
+@import "partials/layout/containers";
+@import "partials/layout/grid";
+@import "partials/layout/flex-columns";
+@import "partials/layout/header";
+@import "partials/layout/footer";
+@import "partials/layout/nav";
+
+/* PAGES */
+@import "partials/pages/page-404";
+
+/* UI */
+@import "partials/ui/buttons";
+@import "partials/ui/hamburger";
+@import "partials/ui/scroll";
+
+@font-face {
+    font-family: roboto;
+    src: url(./assets/fonts/Roboto-Regular.ttf);
+}
+
+* {
+    font-family: roboto;
+}
+
+h1 {
+    position: absolute;
+    left: 40px;
+    z-index: 99;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
 .row {
     display: flex;
     flex-direction: row;

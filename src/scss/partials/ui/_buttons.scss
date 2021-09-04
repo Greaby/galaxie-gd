@@ -1,0 +1,15 @@
+// buttons
+
+@mixin btn($color, $bg, $border, $radius, $padding) {
+    display: inline-block;
+    color: $color;
+    background-color: $bg;
+    border: $border;
+    border-radius: $radius;
+    padding: $padding;
+    transition: all 0.3s $ease;
+    &:hover {
+        color: $bg;
+        background-color: $color;
+    }
+}

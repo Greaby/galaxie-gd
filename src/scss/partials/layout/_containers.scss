@@ -1,0 +1,10 @@
+$grid: $global-grid;
+
+@mixin grid($width: $grid) {
+    max-width: $width;
+    margin: 0 auto;
+}
+
+main {
+    // rules
+}

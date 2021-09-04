@@ -1,0 +1,31 @@
+// Grid
+$global-grid: 1280px;
+$global-margin: 20px;
+
+// Font
+$font-size: 20px;
+$line-height: 1.26;
+
+// Colors
+$color-main: #0077ac;
+$color-second: #42c0ec;
+
+$white: #fff;
+$black: #383838;
+
+// Easings
+$ease: ease-in-out;
+$bezier: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+// breakpoints
+$large: 1400px;
+$desktop: 1280px;
+$medium: 1124px;
+$tablet: 860px;
+$small: 600px;
+$phone: 400px;
+
+// Functions
+@function margin($multiplicator) {
+    @return ($global-margin * $multiplicator);
+}

@@ -1,0 +1,16 @@
+// @font-face {
+//     font-family: "font-name";
+//     src: url("../../assets/fonts/font-name.woff") format("woff"),
+//         url("../../assets/fonts/font-name.woff2") format("woff2");
+//     font-style: normal;
+// }
+
+@mixin regular {
+    // font-family: "font-name", serif;
+}
+
+body {
+    @include regular;
+    font-size: $font-size;
+    line-height: $line-height;
+}

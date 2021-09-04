@@ -1,0 +1,137 @@
+@mixin clearfix {
+    &::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+}
+
+// Media queries
+
+@mixin bp($width, $direction: max) {
+    @if $direction == min {
+        @media screen and (min-width: $width) {
+            @content;
+        }
+    } @else {
+        @media screen and (max-width: $width) {
+            @content;
+        }
+    }
+}
+
+@mixin css-triangle($triangle-size, $triangle-color, $triangle-direction) {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset $triangle-size;
+
+    @if ($triangle-direction == down) {
+        border-color: $triangle-color transparent transparent;
+        border-top-style: solid;
+    }
+    @if ($triangle-direction == up) {
+        border-color: transparent transparent $triangle-color;
+        border-bottom-style: solid;
+    }
+    @if ($triangle-direction == right) {
+        border-color: transparent transparent transparent $triangle-color;
+        border-left-style: solid;
+    }
+    @if ($triangle-direction == left) {
+        border-color: transparent $triangle-color transparent transparent;
+        border-right-style: solid;
+    }
+}
+
+@mixin center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin underlined($color: $main-color) {
+    &::after {
+        position: absolute;
+        content: "";
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: $color;
+        transition: 0.3s ease-in-out;
+    }
+    &:hover {
+        &::after {
+            width: 100%;
+        }
+    }
+}
+
+@mixin link-underline($background, $text, $selection) {
+    @include text-underline-crop($background);
+    @include text-underline($background, $text);
+    @include text-selection($selection);
+
+    color: $text;
+    text-decoration: none;
+
+    *,
+    *:after,
+    &:after,
+    *:before,
+    &:before {
+        text-shadow: none;
+    }
+
+    &:visited {
+        color: $text;
+    }
+}
+
+@mixin img-wrapper($direction) {
+    position: relative;
+    overflow: hidden;
+    img {
+        display: block;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    @if ($direction == width) {
+        img {
+            max-width: none;
+            width: 100%;
+            height: auto;
+        }
+    }
+    @if ($direction == height) {
+        img {
+            max-width: none;
+            width: auto;
+            height: 100%;
+        }
+    }
+}
+
+@mixin ofi {
+    object-fit: cover;
+    // font-family: "object-fit: cover;";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+@mixin remove-ofi {
+    object-fit: initial;
+    position: static;
+    height: auto;
+}
