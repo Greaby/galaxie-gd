@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         Bioshock,
@@ -12,7 +13,6 @@ tags:
         Narration,
         Folie,
     ]
-authors: [Nostalgeek]
 ---
 
 # Bioshock : Dissection d'un Chef d'œuvre

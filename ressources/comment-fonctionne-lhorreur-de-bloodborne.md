@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         Bloodborne,
@@ -32,7 +33,6 @@ tags:
         Folie,
         Musique,
     ]
-authors: [Nostalgeek]
 ---
 
 # Comment fonctionne l'Horreur de Bloodborne ?

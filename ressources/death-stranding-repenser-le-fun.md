@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         Death Stranding,
@@ -24,7 +25,6 @@ tags:
         Dark Souls,
         Decima (Moteur de jeu),
     ]
-authors: [Nostalgeek]
 ---
 
 # Death Stranding : Repenser le Fun

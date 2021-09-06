@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         Remake,
@@ -25,7 +26,6 @@ tags:
         "The Legend of Zelda: Link's Awakening",
         Level design,
     ]
-authors: [Nostalgeek]
 ---
 
 # Remakes & Remasters, bons ou mauvais ?

@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         Final Fantasy VII,
@@ -16,7 +17,6 @@ tags:
         Game Design,
         Level Design,
     ]
-authors: [Nostalgeek]
 ---
 
 # Final Fantasy VII REMAKE, l'Imparfait Prologue

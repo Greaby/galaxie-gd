@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         Ninja Theory,
@@ -11,7 +12,6 @@ tags:
         Maladie,
         Folie,
     ]
-authors: [Nostalgeek]
 ---
 
 # Pourquoi vous devriez jouer à HELLBLADE

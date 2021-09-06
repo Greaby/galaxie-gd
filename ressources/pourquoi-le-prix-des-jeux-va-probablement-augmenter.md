@@ -1,6 +1,6 @@
 ---
-tags: [Prix, Modèle économique, Marketing, Industrie]
 authors: [Nostalgeek]
+tags: [Prix, Modèle économique, Marketing, Industrie]
 ---
 
 # Pourquoi le Prix des jeux va (probablement) Augmenter

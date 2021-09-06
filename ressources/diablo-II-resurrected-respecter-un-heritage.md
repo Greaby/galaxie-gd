@@ -1,6 +1,6 @@
 ---
-tags: [Diablo, Diablo 2, Remaster]
 authors: [Nostalgeek]
+tags: [Diablo, Diablo 2, Remaster]
 ---
 
 # Diablo II Resurrected, Respecter un Héritage

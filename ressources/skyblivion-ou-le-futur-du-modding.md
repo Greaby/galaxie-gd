@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         The Elder Scrolls,
@@ -16,7 +17,6 @@ tags:
         Level Design,
         Game Design,
     ]
-authors: [Nostalgeek]
 ---
 
 # Skyblivion ou le futur du Modding

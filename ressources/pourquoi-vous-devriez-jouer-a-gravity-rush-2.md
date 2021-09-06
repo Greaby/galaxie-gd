@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         Gravity Rush,
@@ -13,7 +14,6 @@ tags:
         Musique,
         Exploration,
     ]
-authors: [Nostalgeek]
 ---
 
 # Pourquoi vous devriez jouer à GRAVITY RUSH 2

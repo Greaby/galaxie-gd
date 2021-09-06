@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         The Witcher,
@@ -20,7 +21,6 @@ tags:
         God of War,
         Death Stranding,
     ]
-authors: [Nostalgeek]
 ---
 
 # Ce qui rend la fantasy Witcher si Humaine

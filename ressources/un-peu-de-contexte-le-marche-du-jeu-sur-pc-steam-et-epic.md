@@ -1,5 +1,5 @@
 ---
-title: "Un peu de Contexte - Le marché du jeu sur PC : Steam et Epic"
+authors: [Ex Serv]
 tags:
     [
         Valve,
@@ -17,7 +17,8 @@ tags:
         Steam Greenlight,
         Fortnite,
     ]
-authors: [Ex Serv]
 ---
+
+# Un peu de Contexte - Le marché du jeu sur PC : Steam et Epic
 
 @[youtube]https://www.youtube.com/watch?v=7Ja6DXl5hLc)

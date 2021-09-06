@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         Ghost of Tsushima,
@@ -19,7 +20,6 @@ tags:
         Interface diégétique,
         Combat,
     ]
-authors: [Nostalgeek]
 ---
 
 # Ghost of Tsushima : La Fin d'une Génération ?

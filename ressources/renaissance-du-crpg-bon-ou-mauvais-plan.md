@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         CRPG,
@@ -15,7 +16,6 @@ tags:
         Disco Elysium,
         The Outer Worlds,
     ]
-authors: [Nostalgeek]
 ---
 
 # La renaissance du CRPG : bon ou mauvais plan ?

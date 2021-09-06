@@ -1,7 +1,8 @@
 ---
-title: "Un peu de Contexte : Les tests de jeux vidéo, Metacritic : un score pour les gouverner tous"
-tags: [Metacritic, Test, Embargo, Industrie, Journalisme, Cyberpunk 2077, Sony]
 authors: [Ex Serv]
+tags: [Metacritic, Test, Embargo, Industrie, Journalisme, Cyberpunk 2077, Sony]
 ---
+
+# Un peu de Contexte : Les tests de jeux vidéo, Metacritic : un score pour les gouverner tous
 
 @[youtube]https://www.youtube.com/watch?v=Xx5-4rqJDts)

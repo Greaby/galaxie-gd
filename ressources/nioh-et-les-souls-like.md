@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         Nioh,
@@ -11,7 +12,6 @@ tags:
         Journalisme,
         Difficulté,
     ]
-authors: [Nostalgeek]
 citations: ["ressource-le-mythe-de-la-difficulte"]
 ---
 

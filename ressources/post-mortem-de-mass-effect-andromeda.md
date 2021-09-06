@@ -1,6 +1,6 @@
 ---
-tags: [Mass Effect, Mass Effect Andromeda]
 authors: [Nostalgeek]
+tags: [Mass Effect, Mass Effect Andromeda]
 ---
 
 # Un Post-Mortem de Mass Effect Andromeda

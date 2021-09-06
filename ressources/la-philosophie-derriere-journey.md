@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         Journey,
@@ -21,7 +22,6 @@ tags:
         Death Stranding,
         Ghost of Tsushima,
     ]
-authors: [Nostalgeek]
 ---
 
 # La philosophie derrière Journey

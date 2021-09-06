@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         Hideo Kojima,
@@ -11,7 +12,6 @@ tags:
         Guerrilla Games,
         Hype,
     ]
-authors: [Nostalgeek]
 ---
 
 # Death Stranding et la Hype

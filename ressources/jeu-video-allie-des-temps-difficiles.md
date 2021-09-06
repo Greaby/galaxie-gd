@@ -1,4 +1,5 @@
 ---
+authors: [Nostalgeek]
 tags:
     [
         "Soutien Psychologique",
@@ -6,7 +7,6 @@ tags:
         Among Us,
         Outer Wilds,
     ]
-authors: [Nostalgeek]
 ---
 
 # Le Jeu Vidéo, Allié des temps difficiles
