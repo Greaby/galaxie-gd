@@ -1,5 +1,4 @@
 ---
-title: Death Stranding et la Hype
 tags:
     [
         Hideo Kojima,
@@ -14,5 +13,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# Death Stranding et la Hype
 
 @[youtube](https://www.youtube.com/watch?v=cPVFzehCG4U)

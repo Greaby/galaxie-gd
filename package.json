@@ -21,6 +21,7 @@
         "markdown-it-block-embed": "^0.0.3",
         "markdown-it-meta": "^0.0.1",
         "markdown-it-oembed": "^1.1.0",
+        "markdown-it-title": "^4.0.0",
         "resolve-url-loader": "^4.0.0",
         "sass": "^1.39.0",
         "sass-loader": "^12.1.0",

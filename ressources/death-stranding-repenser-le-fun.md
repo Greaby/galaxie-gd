@@ -1,5 +1,4 @@
 ---
-title: "Death Stranding : Repenser le Fun"
 tags:
     [
         Death Stranding,
@@ -27,5 +26,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# Death Stranding : Repenser le Fun
 
 @[youtube](https://www.youtube.com/watch?v=FH8h1ZzBZB0)

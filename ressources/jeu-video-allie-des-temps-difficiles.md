@@ -1,5 +1,4 @@
 ---
-title: Le Jeu Vidéo, Allié des temps difficiles
 tags:
     [
         "Soutien Psychologique",
@@ -9,5 +8,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# Le Jeu Vidéo, Allié des temps difficiles
 
 @[youtube](https://www.youtube.com/watch?v=maGRe4Pa1yg)

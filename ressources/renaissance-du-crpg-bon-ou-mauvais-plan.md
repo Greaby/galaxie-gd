@@ -1,5 +1,4 @@
 ---
-title: "La renaissance du CRPG : bon ou mauvais plan ?"
 tags:
     [
         CRPG,
@@ -18,5 +17,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# La renaissance du CRPG : bon ou mauvais plan ?
 
 @[youtube](https://www.youtube.com/watch?v=79OLdAvJ2_U)

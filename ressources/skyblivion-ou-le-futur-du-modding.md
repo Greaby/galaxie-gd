@@ -1,5 +1,4 @@
 ---
-title: Skyblivion ou le futur du Modding
 tags:
     [
         The Elder Scrolls,
@@ -19,5 +18,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# Skyblivion ou le futur du Modding
 
 @[youtube](https://www.youtube.com/watch?v=7BwnLiIWnmQ)

@@ -1,5 +1,4 @@
 ---
-title: "Comment fonctionne l'Horreur de Bloodborne ?"
 tags:
     [
         Bloodborne,
@@ -35,5 +34,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# Comment fonctionne l'Horreur de Bloodborne ?
 
 @[youtube](https://www.youtube.com/watch?v=TUI5ODEXq0g)

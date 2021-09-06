@@ -2,8 +2,9 @@ let mix = require("laravel-mix");
 var fs = require("fs");
 const MarkdownIt = require("markdown-it");
 const blockEmbedPlugin = require("markdown-it-block-embed");
+const MarkdownItTitle = require("markdown-it-title");
+const MarkdownItMeta = require("markdown-it-meta");
 
-const meta = require("markdown-it-meta");
 const { parse } = require("querystring");
 const slugify = require("slugify");
 const Graph = require("graphology");
@@ -109,15 +110,14 @@ const parseFiles = async () => {
             linkify: true,
             breaks: false,
         });
-        md.use(meta);
+        md.use(MarkdownItMeta);
+        md.use(MarkdownItTitle);
         md.use(blockEmbedPlugin, {
             containerClassName: "embed",
         });
 
-        let rendered = md.render(content);
-
-        rendered = `<h2>${md.meta.title}</h2>${rendered}`;
-
+        let env = {};
+        let rendered = md.render(content, env);
         let [slug, ressourceID] = getRessourceID(fileName);
 
         // save html file
@@ -128,7 +128,7 @@ const parseFiles = async () => {
         if (!graph.hasNode(ressourceID)) {
             console.log(`add node ${slug}`);
             graph.addNode(ressourceID, {
-                label: md.meta.title,
+                label: env.title,
                 x: Math.floor(Math.random() * 100),
                 y: Math.floor(Math.random() * 100),
                 slug: slug,

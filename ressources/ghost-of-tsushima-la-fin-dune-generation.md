@@ -1,5 +1,4 @@
 ---
-title: "Ghost of Tsushima : La Fin d'une Génération ?"
 tags:
     [
         Ghost of Tsushima,
@@ -22,5 +21,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# Ghost of Tsushima : La Fin d'une Génération ?
 
 @[youtube](https://www.youtube.com/watch?v=L3LW_XiWUII)

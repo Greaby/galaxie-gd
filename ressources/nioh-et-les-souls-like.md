@@ -1,5 +1,4 @@
 ---
-title: Nioh et les Souls-Like
 tags:
     [
         Nioh,
@@ -15,5 +14,7 @@ tags:
 authors: [Nostalgeek]
 citations: ["ressource-le-mythe-de-la-difficulte"]
 ---
+
+# Nioh et les Souls-Like
 
 @[youtube](https://www.youtube.com/watch?v=yfrJW49aSdk)

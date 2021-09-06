@@ -1,5 +1,4 @@
 ---
-title: Pourquoi vous devriez jouer à HELLBLADE
 tags:
     [
         Ninja Theory,
@@ -14,5 +13,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# Pourquoi vous devriez jouer à HELLBLADE
 
 @[youtube](https://www.youtube.com/watch?v=xGf6aVANsY0)

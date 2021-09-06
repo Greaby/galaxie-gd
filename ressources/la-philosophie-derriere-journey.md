@@ -1,5 +1,4 @@
 ---
-title: "La philosophie derrière Journey"
 tags:
     [
         Journey,
@@ -24,5 +23,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# La philosophie derrière Journey
 
 @[youtube](https://www.youtube.com/watch?v=gl7cHXdEPU4)

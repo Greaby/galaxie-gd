@@ -1,5 +1,4 @@
 ---
-title: Remakes & Remasters, bons ou mauvais ?
 tags:
     [
         Remake,
@@ -28,5 +27,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# Remakes & Remasters, bons ou mauvais ?
 
 @[youtube](https://www.youtube.com/watch?v=fkOWgZTcX-o)

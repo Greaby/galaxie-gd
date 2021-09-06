@@ -1,5 +1,4 @@
 ---
-title: "Bioshock : Dissection d'un Chef d'œuvre"
 tags:
     [
         Bioshock,
@@ -15,5 +14,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# Bioshock : Dissection d'un Chef d'œuvre
 
 @[youtube](https://www.youtube.com/watch?v=AH4YNPIrz2M)

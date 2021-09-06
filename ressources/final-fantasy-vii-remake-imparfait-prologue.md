@@ -1,5 +1,4 @@
 ---
-title: "Final Fantasy VII REMAKE, l'Imparfait Prologue"
 tags:
     [
         Final Fantasy VII,
@@ -19,5 +18,7 @@ tags:
     ]
 authors: [Nostalgeek]
 ---
+
+# Final Fantasy VII REMAKE, l'Imparfait Prologue
 
 @[youtube](https://www.youtube.com/watch?v=v9y89CTtijI)
