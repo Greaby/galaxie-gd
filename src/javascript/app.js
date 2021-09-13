@@ -19,7 +19,7 @@ const loadSigma = (json_file) => {
             sigma_instance = s;
 
             s.graph.nodes().forEach((node) => {
-                switch (node.slug.charAt(0)) {
+                switch (node.type.charAt(0)) {
                     case "r":
                         node.color = "#485922";
                         break;
@@ -36,14 +36,17 @@ const loadSigma = (json_file) => {
             s.bind("clickNode", function (event) {
                 const node = event.data.node;
 
-                loadSigma(`./${node.slug}.json`);
-                loadPage(node.slug);
+                loadSigma(`./${node.type}-${node.slug}.json`);
+                loadPage(`${node.type}-${node.slug}`);
             });
         }
     );
 };
 
 const loadPage = (slug) => {
+    window.location = `./${slug}.html`;
+    return;
+
     fetch(`./${slug}.html`)
         .then((response) => {
             if (response.ok) {
@@ -58,4 +61,10 @@ const loadPage = (slug) => {
         });
 };
 
-loadSigma("./graph.json");
+let json = "/index.json";
+
+if (window.location.pathname !== "/") {
+    json = window.location.pathname.replace(".html", ".json");
+}
+
+loadSigma(json);

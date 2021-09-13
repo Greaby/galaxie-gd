@@ -1,6 +1,5 @@
 ---
 authors: [Ex Serv]
-title: "Un peu de Contexte : Epic Games vs Apple, le Clash des Titans"
 tags:
     [
         Epic Games,
@@ -18,5 +17,7 @@ tags:
         Multivers,
     ]
 ---
+
+# Un peu de Contexte : Epic Games vs Apple, le Clash des Titans
 
 @[youtube](https://www.youtube.com/watch?v=8ljWLHljbUw)

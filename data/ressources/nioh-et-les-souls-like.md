@@ -12,7 +12,7 @@ tags:
         Journalisme,
         Difficulté,
     ]
-citations: ["ressource-le-mythe-de-la-difficulte"]
+citations: ["ressource:le-mythe-de-la-difficulte"]
 ---
 
 # Nioh et les Souls-Like

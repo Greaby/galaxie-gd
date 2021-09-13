@@ -1,85 +1,34 @@
 let mix = require("laravel-mix");
 var fs = require("fs");
-const MarkdownIt = require("markdown-it");
-const blockEmbedPlugin = require("markdown-it-block-embed");
-const MarkdownItTitle = require("markdown-it-title");
-const MarkdownItMeta = require("markdown-it-meta");
 
-const { parse } = require("querystring");
+const Twig = require("twig");
 const slugify = require("slugify");
 const Graph = require("graphology");
-const forceAtlas2 = require("graphology-layout-forceatlas2");
+
+const generateSigmaJSON = require("./src/javascript/sigma_json");
+const parseMarkdownFile = require("./src/javascript/parse_markdown_file");
 
 const DIR_DIST = "dist";
-const DIR_RESSOURCE = "ressources";
+const DATA_FOLDER = "data";
+const DIR_RESSOURCE = "data/ressources";
 
-const BASE_SIZE = 3;
-
-let id = 0;
+let id_index = 0;
 let node_ids = [];
-let getID = (node_name = null) => {
-    if (node_name !== null && node_ids[node_name] !== undefined) {
-        return node_ids[node_name];
+
+let getID = (title, type = null) => {
+    let slug = slugify(title, { lower: true, strict: true });
+    let key = [type, slug].filter((n) => n).join("-");
+
+    let id = null;
+    if (key !== null && node_ids[key] !== undefined) {
+        id = node_ids[key];
+    } else {
+        id = id_index;
+        node_ids[key] = id;
+        id_index += 1;
     }
 
-    id += 1;
-
-    node_ids[node_name] = id.toString();
-    return node_ids[node_name];
-};
-
-let getTagID = (title) => {
-    const slug = `tag-${slugify(title, { lower: true, strict: true })}`;
-    return [slug, getID(slug)];
-};
-
-let getAuthorID = (title) => {
-    const slug = `author-${slugify(title, { lower: true, strict: true })}`;
-    return [slug, getID(slug)];
-};
-
-let getRessourceID = (title) => {
-    const slug = `ressource-${slugify(title, { lower: true, strict: true })}`;
-    return [slug, getID(slug)];
-};
-
-let generateSigmaJSON = (graph) => {
-    const positions = forceAtlas2(graph, {
-        iterations: 1000,
-        adjustSizes: true,
-    });
-
-    let nodes = [];
-    graph.forEachNode((node, attributes) => {
-        nodes.push({
-            id: node,
-            label: attributes.label,
-            size: BASE_SIZE * Math.sqrt(graph.degree(node)),
-            x: positions[node].x,
-            y: positions[node].y,
-            slug: attributes.slug,
-        });
-    });
-
-    let edges = [];
-    graph.forEachEdge(
-        (
-            edge,
-            attributes,
-            source,
-            target,
-            sourceAttributes,
-            targetAttributes
-        ) => {
-            edges.push({
-                id: getID(),
-                source: source,
-                target: target,
-            });
-        }
-    );
-
-    return { nodes: nodes, edges: edges };
+    return { slug, id };
 };
 
 const initDistFolder = () => {
@@ -97,90 +46,155 @@ const parseFiles = async () => {
 
     let citations = [];
     for (let index = 0; index < fileNames.length; index++) {
-        const fileName = fileNames[index].replace(".md", "");
-
-        console.log(`parse ${fileName}`);
-
-        const content = await fs.promises.readFile(
-            `${DIR_RESSOURCE}/${fileName}.md`,
-            "utf-8"
+        const file_data = await parseMarkdownFile(
+            `${DATA_FOLDER}/ressources/${fileNames[index]}`
+        );
+        const { slug, id } = getID(
+            fileNames[index].replace(".md", ""),
+            "ressource"
         );
 
-        const md = new MarkdownIt({
-            linkify: true,
-            breaks: false,
-        });
-        md.use(MarkdownItMeta);
-        md.use(MarkdownItTitle);
-        md.use(blockEmbedPlugin, {
-            containerClassName: "embed",
-        });
-
-        let env = {};
-        let rendered = md.render(content, env);
-        let [slug, ressourceID] = getRessourceID(fileName);
-
         // save html file
-        fs.writeFile(`${DIR_DIST}/${slug}.html`, rendered, function (err) {
-            if (err) return console.log(err);
-        });
+        Twig.renderFile(
+            "./src/template.twig",
+            { content: file_data.render },
+            (err, html) => {
+                fs.writeFile(
+                    `${DIR_DIST}/ressource-${slug}.html`,
+                    html,
+                    function (err) {
+                        if (err) return console.log(err);
+                    }
+                );
+            }
+        );
 
-        if (!graph.hasNode(ressourceID)) {
+        if (!graph.hasNode(id)) {
             console.log(`add node ${slug}`);
-            graph.addNode(ressourceID, {
-                label: env.title,
+            graph.addNode(id, {
+                label: file_data.env.title,
                 x: Math.floor(Math.random() * 100),
                 y: Math.floor(Math.random() * 100),
                 slug: slug,
+                type: "ressource",
             });
         }
 
-        if (md.meta.citations) {
-            md.meta.citations.forEach((citation) => {
-                citations.push([ressourceID, getID(citation)]);
+        if (file_data.meta.citations) {
+            file_data.meta.citations.forEach((citation) => {
+                let [type, slug] = citation.split(":");
+                citations.push([id, type, slug]);
             });
         }
 
-        md.meta.authors.forEach((author) => {
-            let [slug, authorID] = getAuthorID(author);
+        file_data.meta.authors.forEach(async (author) => {
+            let { slug, id: authorID } = getID(author, "author");
             if (!graph.hasNode(authorID)) {
-                console.log(`add node ${slug}`);
+                console.log(`add author node ${slug}`);
                 graph.addNode(authorID, {
                     label: author,
                     x: Math.floor(Math.random() * 100),
                     y: Math.floor(Math.random() * 100),
                     slug: slug,
+                    type: "author",
                 });
+
+                let content = `<h1>${author}</h1>`;
+
+                if (fs.existsSync(`data/authors/${slug}.md`)) {
+                    const author_data = await parseMarkdownFile(
+                        `data/authors/${slug}.md`
+                    );
+
+                    content = author_data.render;
+                }
+
+                Twig.renderFile(
+                    "./src/template.twig",
+                    { content },
+                    (err, html) => {
+                        fs.writeFile(
+                            `${DIR_DIST}/author-${slug}.html`,
+                            html,
+                            function (err) {
+                                if (err) return console.log(err);
+                            }
+                        );
+                    }
+                );
             }
 
-            graph.addEdge(authorID, ressourceID);
+            graph.addEdge(authorID, id);
         });
 
-        md.meta.tags.forEach((tag) => {
-            const [slug, tagID] = getTagID(tag);
+        file_data.meta.tags.forEach(async (tag) => {
+            const { slug, id: tagID } = getID(tag, "tag");
             if (!graph.hasNode(tagID)) {
-                console.log(`add node ${slug}`);
+                console.log(`add tag node ${slug}`);
                 graph.addNode(tagID, {
                     label: tag,
                     x: Math.floor(Math.random() * 100),
                     y: Math.floor(Math.random() * 100),
                     slug: slug,
+                    type: "tag",
                 });
+
+                let content = `<h1>${tag}</h1>`;
+
+                if (fs.existsSync(`data/tags/${slug}.md`)) {
+                    const tag_data = await parseMarkdownFile(
+                        `data/tags/${slug}.md`
+                    );
+
+                    content = tag_data.render;
+                }
+
+                Twig.renderFile(
+                    "./src/template.twig",
+                    { content },
+                    (err, html) => {
+                        fs.writeFile(
+                            `${DIR_DIST}/tag-${slug}.html`,
+                            html,
+                            function (err) {
+                                if (err) return console.log(err);
+                            }
+                        );
+                    }
+                );
             }
-            graph.addEdge(tagID, ressourceID);
+            graph.addEdge(tagID, id);
         });
     }
 
-    citations.forEach(([source, target]) => {
-        graph.addEdge(source, target);
+    citations.forEach(([source_id, type, slug]) => {
+        let { id: target_id } = getID(slug, type);
+
+        if (graph.hasNode(target_id)) {
+            console.log(`add citation ${source_id}->${slug}`);
+            graph.addEdge(source_id, target_id);
+        }
     });
 
     // save main graph
     fs.writeFile(
-        `${DIR_DIST}/graph.json`,
+        `${DIR_DIST}/index.json`,
         JSON.stringify(generateSigmaJSON(graph)),
         function (err) {
             if (err) return console.log(err);
+        }
+    );
+
+    // save main markdown
+    let main_data = await parseMarkdownFile(`${DATA_FOLDER}/index.md`);
+
+    Twig.renderFile(
+        "./src/template.twig",
+        { content: main_data.render },
+        (err, html) => {
+            fs.writeFile(`${DIR_DIST}/index.html`, html, function (err) {
+                if (err) return console.log(err);
+            });
         }
     );
 
@@ -208,8 +222,12 @@ const parseFiles = async () => {
             );
         });
 
+        let file_name = [attributes.type, attributes.slug]
+            .filter((n) => n)
+            .join("-");
+
         fs.writeFile(
-            `${DIR_DIST}/${attributes.slug}.json`,
+            `${DIR_DIST}/${file_name}.json`,
             JSON.stringify(generateSigmaJSON(subGraph)),
             function (err) {
                 if (err) return console.log(err);
@@ -221,6 +239,7 @@ const parseFiles = async () => {
 initDistFolder();
 parseFiles();
 
+// build sass and js
 mix.setPublicPath(DIR_DIST);
 mix.setResourceRoot(".");
 mix.options({
@@ -236,5 +255,5 @@ mix.webpackConfig({
 mix.sass("src/scss/app.scss", "");
 mix.js("src/javascript/app.js", "");
 
-mix.copy("src/index.html", DIR_DIST);
+//mix.copy("src/index.html", DIR_DIST);
 mix.copyDirectory("src/javascript/vendor", `${DIR_DIST}/js/vendor`);
