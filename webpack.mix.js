@@ -254,6 +254,3 @@ mix.webpackConfig({
 });
 mix.sass("src/scss/app.scss", "");
 mix.js("src/javascript/app.js", "");
-
-//mix.copy("src/index.html", DIR_DIST);
-mix.copyDirectory("src/javascript/vendor", `${DIR_DIST}/js/vendor`);

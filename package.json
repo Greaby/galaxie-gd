@@ -25,7 +25,7 @@
         "resolve-url-loader": "^4.0.0",
         "sass": "^1.39.0",
         "sass-loader": "^12.1.0",
-        "sigma-js": "^1.1.5",
+        "sigma": "^2.0.0-beta9",
         "slugify": "^1.6.0",
         "stream-http": "^3.2.0",
         "twig": "^1.15.4"
