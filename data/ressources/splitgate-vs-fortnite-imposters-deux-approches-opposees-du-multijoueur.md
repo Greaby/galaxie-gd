@@ -11,7 +11,7 @@ tags:
         Équipe,
         Individualisme,
         Interaction sociale,
-        Amoug us,
+        Among us,
         Les Loups Garous de Thiercelieux,
     ]
 ---
