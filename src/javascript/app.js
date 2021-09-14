@@ -1,13 +1,41 @@
 import Graph from "graphology";
 import Sigma from "sigma";
 
+const BASE_SIZE = 2;
+
 const loadSigma = async (json_file) => {
     let data = await fetch(json_file).then((response) => response.json());
     const graph = new Graph();
     graph.import(data);
 
+    graph.forEachNode((node, attributes) => {
+        let color = null;
+        switch (attributes.type) {
+            case "ressource":
+                color = "#D24335";
+                break;
+            case "tag":
+                color = "#87AA66";
+                break;
+            case "author":
+                color = "#4CB3D2";
+                break;
+        }
+
+        graph.setNodeAttribute(node, "color", color);
+        graph.setNodeAttribute(
+            node,
+            "size",
+            BASE_SIZE * Math.sqrt(graph.degree(node))
+        );
+    });
+
+    const settings = {
+        labelRenderedSizeThreshold: 10,
+    };
+
     const container = document.getElementById("graph-container");
-    const renderer = new Sigma(graph, container);
+    const renderer = new Sigma(graph, container, settings);
 
     renderer.on("clickNode", ({ node, captor, event }) => {
         let slug = graph.getNodeAttribute(node, "slug");
@@ -23,48 +51,3 @@ if (window.location.pathname !== "/") {
 }
 
 loadSigma(json_file);
-
-// let sigma_instance = null;
-// const loadSigma = (json_file) => {
-//     if (sigma_instance !== null) {
-//         sigma_instance.kill();
-//     }
-
-//     sigma.parsers.json(
-//         json_file,
-//         {
-//             container: "graph-container",
-//             settings: {
-//                 nodesPowRatio: 0.75,
-//                 maxNodeSize: 20,
-//                 //defaultNodeColor: "#ec5148",
-//                 labelThreshold: 5,
-//             },
-//         },
-//         (s) => {
-//             sigma_instance = s;
-
-//             s.graph.nodes().forEach((node) => {
-//                 switch (node.type.charAt(0)) {
-//                     case "r":
-//                         node.color = "#485922";
-//                         break;
-//                     case "t":
-//                         node.color = "#798C35";
-//                         break;
-//                     case "a":
-//                         node.color = "#B4BF5E";
-//                         break;
-//                 }
-//             });
-//             s.refresh({ skipIndexation: true });
-
-//             s.bind("clickNode", function (event) {
-//                 const node = event.data.node;
-
-//                 loadSigma(`./${node.type}-${node.slug}.json`);
-//                 loadPage(`${node.type}-${node.slug}`);
-//             });
-//         }
-//     );
-// };

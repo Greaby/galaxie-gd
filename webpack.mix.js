@@ -57,7 +57,7 @@ const parseFiles = async () => {
         // save html file
         Twig.renderFile(
             "./src/template.twig",
-            { content: file_data.render },
+            { content: file_data.render, title: file_data.env.title },
             (err, html) => {
                 fs.writeFile(
                     `${DIR_DIST}/ressource-${slug}.html`,
@@ -111,7 +111,7 @@ const parseFiles = async () => {
 
                 Twig.renderFile(
                     "./src/template.twig",
-                    { content },
+                    { content, title: author },
                     (err, html) => {
                         fs.writeFile(
                             `${DIR_DIST}/author-${slug}.html`,
@@ -151,7 +151,7 @@ const parseFiles = async () => {
 
                 Twig.renderFile(
                     "./src/template.twig",
-                    { content },
+                    { content, title: tag },
                     (err, html) => {
                         fs.writeFile(
                             `${DIR_DIST}/tag-${slug}.html`,
