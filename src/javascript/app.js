@@ -44,10 +44,10 @@ const loadSigma = async (json_file) => {
     });
 };
 
-let json_file = "/index.json";
+let json_file = "./index.json";
 
 if (window.location.pathname !== "/") {
-    json_file = window.location.pathname.replace(".html", ".json");
+    json_file = "." + window.location.pathname.replace(".html", ".json");
 }
 
 loadSigma(json_file);
