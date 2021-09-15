@@ -28,7 +28,7 @@ Les fichiers de ressources seront automatiquement parsés pour générer le grap
 
 `Titre de ma ressource` devient `titre-de-ma-ressource.md`
 
-Les fichiers d’auteurs et de tags sont parsés seulement si ceux-ci sont présents dans au moins une ressource.
+Les fichiers d’auteurs et de tags sont parsés seulement si ceux-ci sont présents dans au moins une ressource. Elles n'ont pas besoin d'avoir le markup Yaml en en-tête.
 
 Le slug doit correspondre à celui généré par le moteur (visible dans l’URL). Par exemple:
 
