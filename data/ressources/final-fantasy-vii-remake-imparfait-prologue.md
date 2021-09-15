@@ -15,7 +15,7 @@ tags:
         Musique,
         Nobuo Uematsu,
         Game Design,
-        Level Design,
+        Level design,
     ]
 ---
 

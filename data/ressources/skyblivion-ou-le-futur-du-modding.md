@@ -14,7 +14,7 @@ tags:
         Bethesda,
         Morrowind,
         Open World,
-        Level Design,
+        Level design,
         Game Design,
     ]
 ---
