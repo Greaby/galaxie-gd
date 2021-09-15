@@ -46,6 +46,10 @@ const parseFiles = async () => {
 
     let citations = [];
     for (let index = 0; index < fileNames.length; index++) {
+        if (fileNames[index][0] === ".") {
+            continue;
+        }
+
         const file_data = await parseMarkdownFile(
             `${DATA_FOLDER}/ressources/${fileNames[index]}`
         );
