@@ -22,7 +22,7 @@ Les ressources sont représentées sous forme de fiche en Markdown avec des mét
 
 Cette documentation est collaborative, chacun est libre de proposer de nouvelles ressources, des modifications et corrections.
 
-Pour ajouter un contenu, copiez le template de fiche se trouvant dans `data/template.md`. Le template utilise le format [Markdown](https://guides.github.com/features/mastering-markdown/) avec des métadonnées en [Yaml](https://fr.wikipedia.org/wiki/YAML) en en-tête. Il est possible de créer des fiches de ressources, d’auteurs et de tags.
+Pour ajouter un contenu, copiez le template de fiche se trouvant dans `data/template.md`. Le template utilise le format [Markdown](https://guides.github.com/features/mastering-markdown/) avec des métadonnées en [YAML front matter](https://fr.wikipedia.org/wiki/YAML) en en-tête. Il est possible de créer des fiches de ressources, d’auteurs et de tags.
 
 Les fichiers de ressources seront automatiquement parsés pour générer le graph. Le nom du fichier de ressource est libre, la bonne pratique est de créer un slug du titre de la ressource. Par exemple:
 
