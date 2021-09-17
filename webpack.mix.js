@@ -1,6 +1,8 @@
 let mix = require("laravel-mix");
 var fs = require("fs");
 
+const timestamp = Date.now();
+
 const Twig = require("twig");
 const slugify = require("slugify");
 const Graph = require("graphology");
@@ -61,7 +63,11 @@ const parseFiles = async () => {
         // save html file
         Twig.renderFile(
             "./src/template.twig",
-            { content: file_data.render, title: file_data.env.title },
+            {
+                timestamp,
+                content: file_data.render,
+                title: file_data.env.title,
+            },
             (err, html) => {
                 fs.writeFile(
                     `${DIR_DIST}/ressource-${slug}.html`,
@@ -115,7 +121,7 @@ const parseFiles = async () => {
 
                 Twig.renderFile(
                     "./src/template.twig",
-                    { content, title: author },
+                    { timestamp, content, title: author },
                     (err, html) => {
                         fs.writeFile(
                             `${DIR_DIST}/author-${slug}.html`,
@@ -155,7 +161,7 @@ const parseFiles = async () => {
 
                 Twig.renderFile(
                     "./src/template.twig",
-                    { content, title: tag },
+                    { timestamp, content, title: tag },
                     (err, html) => {
                         fs.writeFile(
                             `${DIR_DIST}/tag-${slug}.html`,
@@ -194,7 +200,7 @@ const parseFiles = async () => {
 
     Twig.renderFile(
         "./src/template.twig",
-        { content: main_data.render },
+        { timestamp, content: main_data.render },
         (err, html) => {
             fs.writeFile(`${DIR_DIST}/index.html`, html, function (err) {
                 if (err) return console.log(err);
