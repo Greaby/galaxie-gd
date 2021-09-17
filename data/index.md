@@ -6,4 +6,6 @@ Cette documentation est collaborative, chacun est libre de proposer de nouvelles
 
 Les ressources sont représentées sous forme de fiche en Markdown avec des métadonnées telles que les auteurs et les sujets traités. Le moteur [Telescope](https://github.com/greaby/telescope) est utilisé pour générer les pages et le graph automatique à chaque modification.
 
-Pour contribuer, rendez-vous sur la [page Github du projet](https://github.com/greaby/galaxie-gd).
+Pour contribuer, rendez-vous sur la page Github du projet :
+
+[![Galaxie GD sur Github](https://github-readme-stats.vercel.app/api/pin/?username=greaby&repo=galaxie-gd)](https://github.com/greaby/galaxie-gd)
