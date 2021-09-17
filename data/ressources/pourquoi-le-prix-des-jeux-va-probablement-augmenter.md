@@ -10,7 +10,7 @@ tags:
         Triple A,
         Cyberpunk 2077,
         CD Projekt Red,
-        The Witcher 3,
+        "The Witcher 3: Wild Hunt",
         Red Dead Redemption 2,
         Rockstar Games,
         The Last of Us Part II,

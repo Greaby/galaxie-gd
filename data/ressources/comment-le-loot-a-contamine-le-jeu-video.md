@@ -7,6 +7,7 @@ tags: [
         Récompense extrinsèque,
         Diablo,
         Diablo 2,
+        Action RPG,
         David Brevik,
         Blizzard Entertainment,
         Aléatoire,
