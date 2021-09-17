@@ -6,7 +6,7 @@ tags:
         Sucker Punch,
         Open world,
         Action RPG,
-        Triple AAA,
+        Triple A,
         Génération de consoles,
         PS4,
         PS5,

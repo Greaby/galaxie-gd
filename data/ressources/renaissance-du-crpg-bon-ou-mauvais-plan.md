@@ -3,7 +3,7 @@ authors: [NostalGeek]
 tags:
     [
         CRPG,
-        Triple AAA,
+        Triple A,
         Action RPG,
         Obsidian Entertainment,
         Liberté,

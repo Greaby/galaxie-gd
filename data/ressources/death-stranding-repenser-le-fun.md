@@ -19,7 +19,7 @@ tags:
         What Remains of Edith Finch,
         Walking Simulator,
         Jeu indépendant,
-        Triple AAA,
+        Triple A,
         Open world,
         Sony,
         Dark Souls,
