@@ -1,5 +1,5 @@
 ---
-authors: [Nostalgeek]
+authors: [NostalGeek]
 tags: [Diablo, Diablo 2, Remaster]
 ---
 

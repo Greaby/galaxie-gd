@@ -1,5 +1,5 @@
 ---
-authors: [Nostalgeek]
+authors: [NostalGeek]
 tags: [Prix, Modèle économique, Marketing, Industrie]
 ---
 

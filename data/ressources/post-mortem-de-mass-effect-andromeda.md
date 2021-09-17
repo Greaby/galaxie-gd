@@ -1,5 +1,5 @@
 ---
-authors: [Nostalgeek]
+authors: [NostalGeek]
 tags: [Mass Effect, Mass Effect Andromeda]
 ---
 
