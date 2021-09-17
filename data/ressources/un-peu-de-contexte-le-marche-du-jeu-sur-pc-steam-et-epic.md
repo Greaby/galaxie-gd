@@ -21,4 +21,4 @@ tags:
 
 # Un peu de Contexte - Le marché du jeu sur PC : Steam et Epic
 
-@[youtube](https://www.youtube.com/watch?v=7Ja6DXl5hLc)
+![youtube](https://www.youtube.com/watch?v=7Ja6DXl5hLc)

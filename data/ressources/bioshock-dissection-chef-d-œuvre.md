@@ -17,4 +17,4 @@ tags:
 
 # Bioshock : Dissection d'un Chef d'œuvre
 
-@[youtube](https://www.youtube.com/watch?v=AH4YNPIrz2M)
+![youtube](https://www.youtube.com/watch?v=AH4YNPIrz2M)

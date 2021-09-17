@@ -29,4 +29,4 @@ tags:
 
 # Death Stranding : Repenser le Fun
 
-@[youtube](https://www.youtube.com/watch?v=FH8h1ZzBZB0)
+![youtube](https://www.youtube.com/watch?v=FH8h1ZzBZB0)

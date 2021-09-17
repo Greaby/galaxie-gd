@@ -11,4 +11,4 @@ tags:
 
 # Le Jeu Vidéo, Allié des temps difficiles
 
-@[youtube](https://www.youtube.com/watch?v=maGRe4Pa1yg)
+![youtube](https://www.youtube.com/watch?v=maGRe4Pa1yg)

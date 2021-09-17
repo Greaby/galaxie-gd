@@ -15,4 +15,4 @@ NostalGeek fait de l'analyse de jeu vidéo sur YouTube.
 
 ## Podcast
 
-![spotify](https://open.spotify.com/show/7GbBBcAoz6MJpBPQhc5qCB?si=bj2Qv7fXQPeTYobgQswkpw&dl_branch=1)
+![spotify](https://open.spotify.com/show/7GbBBcAoz6MJpBPQhc5qCB)

@@ -21,4 +21,4 @@ tags:
 
 # Skyblivion ou le futur du Modding
 
-@[youtube](https://www.youtube.com/watch?v=7BwnLiIWnmQ)
+![youtube](https://www.youtube.com/watch?v=7BwnLiIWnmQ)

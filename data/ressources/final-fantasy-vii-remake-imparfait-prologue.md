@@ -21,4 +21,4 @@ tags:
 
 # Final Fantasy VII REMAKE, l'Imparfait Prologue
 
-@[youtube](https://www.youtube.com/watch?v=v9y89CTtijI)
+![youtube](https://www.youtube.com/watch?v=v9y89CTtijI)

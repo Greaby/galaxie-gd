@@ -20,4 +20,4 @@ tags:
 
 # Un peu de Contexte : Epic Games vs Apple, le Clash des Titans
 
-@[youtube](https://www.youtube.com/watch?v=8ljWLHljbUw)
+![youtube](https://www.youtube.com/watch?v=8ljWLHljbUw)

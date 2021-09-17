@@ -40,4 +40,4 @@ tags:
 
 Le premier The Last of Us n'avait absolument besoin d'une suite. Si bien que le second opus semble se démener pour être original et novateur, et que tout cela ne fonctionne pas réellement. Voici mon test de The Last of Us Part II.
 
-@[youtube](https://www.youtube.com/watch?v=1qT5j6GzqX8)
+![youtube](https://www.youtube.com/watch?v=1qT5j6GzqX8)

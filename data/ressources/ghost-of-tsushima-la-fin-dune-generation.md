@@ -24,4 +24,4 @@ tags:
 
 # Ghost of Tsushima : La Fin d'une Génération ?
 
-@[youtube](https://www.youtube.com/watch?v=L3LW_XiWUII)
+![youtube](https://www.youtube.com/watch?v=L3LW_XiWUII)

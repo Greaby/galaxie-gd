@@ -23,6 +23,6 @@ tags:
 
 On y est enfin, la Playstation 5 a été annoncée avec une belle fournée de jeux next-gen raisonnablement impressionnants. Mais c'est l'annonce du remake de Demon's Souls, le premier jeu de Hidetaka Miyazaki, maintenant patron de From Software, qui m'aura le plus fait réagir.
 
-@[youtube](https://www.youtube.com/watch?v=5AXVjF7TKGw)
+![youtube](https://www.youtube.com/watch?v=5AXVjF7TKGw)
 
 TODO : Ajouter citation 9:30

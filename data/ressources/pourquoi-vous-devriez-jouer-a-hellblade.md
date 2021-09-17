@@ -16,4 +16,4 @@ tags:
 
 # Pourquoi vous devriez jouer à HELLBLADE
 
-@[youtube](https://www.youtube.com/watch?v=xGf6aVANsY0)
+![youtube](https://www.youtube.com/watch?v=xGf6aVANsY0)

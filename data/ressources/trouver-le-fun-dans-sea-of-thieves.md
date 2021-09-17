@@ -24,4 +24,4 @@ tags:
 
 Sea of Thieves. Jeu problématique, étrange, formidable. Dans un jeu live service qui encourage autant les expériences entre joueurs et amis pour masquer un manque d'inventivité, peut-on réellement trouver le fun ? Si oui, est-ce le jeu qui en est réellement responsable ?
 
-@[youtube](https://www.youtube.com/watch?v=qNkO6xTvw1I)
+![youtube](https://www.youtube.com/watch?v=qNkO6xTvw1I)

@@ -20,4 +20,4 @@ tags:
 
 # La renaissance du CRPG : bon ou mauvais plan ?
 
-@[youtube](https://www.youtube.com/watch?v=79OLdAvJ2_U)
+![youtube](https://www.youtube.com/watch?v=79OLdAvJ2_U)

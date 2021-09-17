@@ -18,4 +18,4 @@ tags:
 
 # Pourquoi vous devriez jouer à GRAVITY RUSH 2
 
-@[youtube](https://www.youtube.com/watch?v=WIuB9WaI1bA)
+![youtube](https://www.youtube.com/watch?v=WIuB9WaI1bA)

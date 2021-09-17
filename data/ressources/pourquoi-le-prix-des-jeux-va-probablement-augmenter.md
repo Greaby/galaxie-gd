@@ -44,4 +44,4 @@ tags:
 
 La rumeur de plus en plus insistante selon laquelle le prix des jeux vidéos augmenterait au tournant de la nouvelle génération a fait beaucoup réagir. Dans cette vidéo, on se demande d'où vient cette nécessité pour les publishers, pourquoi cette augmentation a toutes les chances d'arriver, et pourquoi il est temps de mettre fin à certaines pratiques de l'industrie AAA.
 
-@[youtube](https://www.youtube.com/watch?v=bfy6_ewnOjI)
+![youtube](https://www.youtube.com/watch?v=bfy6_ewnOjI)

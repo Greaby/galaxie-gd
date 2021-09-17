@@ -37,4 +37,4 @@ tags:
 
 # Comment fonctionne l'Horreur de Bloodborne ?
 
-@[youtube](https://www.youtube.com/watch?v=TUI5ODEXq0g)
+![youtube](https://www.youtube.com/watch?v=TUI5ODEXq0g)
