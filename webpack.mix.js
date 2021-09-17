@@ -258,3 +258,4 @@ mix.webpackConfig({
 });
 mix.sass("src/scss/app.scss", "");
 mix.js("src/javascript/app.js", "");
+mix.disableNotifications();
