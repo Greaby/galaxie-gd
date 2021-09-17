@@ -10,7 +10,7 @@ tags:
         Jason Schreier,
         Naughty Dog,
         Crunch,
-        Rockstar,
+        Rockstar Games,
         Naughty Dog Engine,
         Graphisme,
         Végétagion,

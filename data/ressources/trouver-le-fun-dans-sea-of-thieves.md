@@ -9,6 +9,7 @@ tags:
         Rare Entertainment,
         Pirate,
         Jeu service,
+        Live service,
         Fallout 76,
         Engagement,
         Gameplay émergent,
