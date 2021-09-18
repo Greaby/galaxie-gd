@@ -5,10 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <link rel="stylesheet" href="./app.css?{{timestamp}}" />
+        <link rel="stylesheet" href="./app.css?{{ timestamp }}" />
 
-        <script src="./js/app.js?{{timestamp}}"></script>
-        <title>{% if title %}{{title}} - {% endif %}Galaxie GD</title>
+        <script src="./js/app.js?{{ timestamp }}"></script>
+        <title>{% if title %}{{ title }} - {% endif %}Galaxie GD</title>
     </head>
     <body>
         <div class="row">
@@ -16,7 +16,27 @@
                 <div id="graph-container"></div>
             </div>
             <div class="column">
-                <div id="page-content">{{content}}</div>
+                <div id="page-content">
+                    {{ content }}
+
+                    {% if links %}
+                    <div>
+                        <h3>Voir aussi</h3>
+
+                        <ul>
+                            {% for link in links %}
+                            <li>
+                                <a
+                                    href="{{ link.type }}-{{ link.slug }}.html"
+                                    >{{ link.title }}</a
+                                >
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    {% endif %}
+                </div>
             </div>
         </div>
     </body>

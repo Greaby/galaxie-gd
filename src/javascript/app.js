@@ -24,7 +24,7 @@ const loadSigma = async (json_file) => {
     });
 
     const settings = {
-        labelRenderedSizeThreshold: 10,
+        labelRenderedSizeThreshold: 15,
     };
 
     const container = document.getElementById("graph-container");

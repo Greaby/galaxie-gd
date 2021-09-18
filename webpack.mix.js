@@ -3,7 +3,8 @@ var fs = require("fs");
 
 const Twig = require("twig");
 const slugify = require("slugify");
-const Graph = require("graphology");
+const { Graph } = require("graphology");
+const pagerank = require("graphology-pagerank");
 
 const generateSigmaJSON = require("./src/javascript/sigma_json");
 const parseMarkdownFile = require("./src/javascript/parse_markdown_file");
@@ -17,6 +18,8 @@ const DIR_RESSOURCE = "data/ressources";
 
 let id_index = 0;
 let node_ids = [];
+
+let files_to_render = [];
 
 let getID = (title, type = null) => {
     let slug = slugify(title, { lower: true, strict: true });
@@ -61,24 +64,13 @@ const parseFiles = async () => {
             "ressource"
         );
 
-        // save html file
-        Twig.renderFile(
-            "./src/template.twig",
-            {
-                timestamp,
-                content: file_data.render,
-                title: file_data.env.title,
-            },
-            (err, html) => {
-                fs.writeFile(
-                    `${DIR_DIST}/ressource-${slug}.html`,
-                    html,
-                    function (err) {
-                        if (err) return console.log(err);
-                    }
-                );
-            }
-        );
+        files_to_render.push({
+            type: "ressource",
+            id: id,
+            title: file_data.env.title,
+            slug: slug,
+            content: file_data.render,
+        });
 
         if (!graph.hasNode(id)) {
             console.log(`add node ${slug}`);
@@ -120,22 +112,17 @@ const parseFiles = async () => {
                     content = author_data.render;
                 }
 
-                Twig.renderFile(
-                    "./src/template.twig",
-                    { timestamp, content, title: author },
-                    (err, html) => {
-                        fs.writeFile(
-                            `${DIR_DIST}/author-${slug}.html`,
-                            html,
-                            function (err) {
-                                if (err) return console.log(err);
-                            }
-                        );
-                    }
-                );
+                files_to_render.push({
+                    type: "author",
+                    id: authorID,
+                    title: author,
+                    slug: slug,
+                    content: content,
+                });
             }
 
             graph.addEdge(authorID, id);
+            graph.addEdge(id, authorID);
         });
 
         file_data.meta.tags.forEach(async (tag) => {
@@ -160,21 +147,16 @@ const parseFiles = async () => {
                     content = tag_data.render;
                 }
 
-                Twig.renderFile(
-                    "./src/template.twig",
-                    { timestamp, content, title: tag },
-                    (err, html) => {
-                        fs.writeFile(
-                            `${DIR_DIST}/tag-${slug}.html`,
-                            html,
-                            function (err) {
-                                if (err) return console.log(err);
-                            }
-                        );
-                    }
-                );
+                files_to_render.push({
+                    type: "tag",
+                    id: tagID,
+                    title: tag,
+                    slug: slug,
+                    content: content,
+                });
             }
             graph.addEdge(tagID, id);
+            graph.addEdge(id, tagID);
         });
     }
 
@@ -187,12 +169,38 @@ const parseFiles = async () => {
         }
     });
 
+    pagerank.assign(graph);
+    const ranks = graph.nodes().map((node) => {
+        return graph.getNodeAttribute(node, "pagerank");
+    });
+
+    const min_rank = Math.min(...ranks);
+    const max_rank = Math.max(...ranks);
+
+    console.log(min_rank, max_rank);
+
+    const MIN_SIZE = 5;
+    const MAX_SIZE = 25;
+
+    const lerp = (x, y, a) => x * (1 - a) + y * a;
+    const clamp = (a, min = 0, max = 1) => Math.min(max, Math.max(min, a));
+    const invlerp = (x, y, a) => clamp((a - x) / (y - x));
+    const range = (x1, y1, x2, y2, a) => lerp(x2, y2, invlerp(x1, y1, a));
+
     // set node size
     graph.forEachNode((node, attributes) => {
         graph.setNodeAttribute(
             node,
             "size",
-            Math.round(BASE_SIZE * Math.sqrt(graph.degree(node)))
+            Math.round(
+                range(
+                    min_rank,
+                    max_rank,
+                    MIN_SIZE,
+                    MAX_SIZE,
+                    attributes.pagerank
+                )
+            )
         );
     });
 
@@ -204,6 +212,62 @@ const parseFiles = async () => {
             if (err) return console.log(err);
         }
     );
+
+    // render html files
+    files_to_render.forEach((data) => {
+        let links = [];
+        let added_nodes = [];
+        graph.forEachNeighbor(data.id, function (neighbor, attributes) {
+            if (neighbor != data.id && !added_nodes.includes(neighbor)) {
+                added_nodes.push(neighbor);
+                links.push({
+                    type: attributes.type,
+                    slug: attributes.slug,
+                    title: attributes.label,
+                    rank: attributes.pagerank,
+                });
+            }
+
+            graph.forEachNeighbor(
+                neighbor,
+                function (secondNeighbor, attributes) {
+                    if (
+                        secondNeighbor != data.id &&
+                        !added_nodes.includes(secondNeighbor)
+                    ) {
+                        added_nodes.push(secondNeighbor);
+                        links.push({
+                            type: attributes.type,
+                            slug: attributes.slug,
+                            title: attributes.label,
+                            rank: attributes.pagerank,
+                        });
+                    }
+                }
+            );
+        });
+
+        links = links.sort((a, b) => (a.rank > b.rank ? -1 : 1)).slice(0, 5);
+
+        Twig.renderFile(
+            "./src/template.twig",
+            {
+                timestamp,
+                content: data.content,
+                title: data.title,
+                links: links,
+            },
+            (err, html) => {
+                fs.writeFile(
+                    `${DIR_DIST}/${data.type}-${data.slug}.html`,
+                    html,
+                    function (err) {
+                        if (err) return console.log(err);
+                    }
+                );
+            }
+        );
+    });
 
     // save main markdown
     let main_data = await parseMarkdownFile(`${DATA_FOLDER}/index.md`);
