@@ -53,6 +53,7 @@ module.exports = class Telescope {
                 title: file_data.env.title,
                 slug: slug,
                 content: file_data.render,
+                tags: file_data.meta.tags,
             });
 
             if (!graph.hasNode(id)) {
@@ -225,6 +226,7 @@ module.exports = class Telescope {
                     title: data.title,
                     content: data.content,
                     links: links,
+                    tags: data.tags,
                 },
                 (err, html) => {
                     fs.writeFile(
