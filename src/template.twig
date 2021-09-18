@@ -8,7 +8,9 @@
         <link rel="stylesheet" href="./app.css?{{ timestamp }}" />
 
         <script src="./js/app.js?{{ timestamp }}"></script>
-        <title>{% if title %}{{ title }} - {% endif %}Galaxie GD</title>
+        <title>
+            {% if title %}{{ title }} - {% endif %}{{ labels.project_title }}
+        </title>
     </head>
     <body>
         <div class="row">
@@ -21,7 +23,7 @@
 
                     {% if links %}
                     <div>
-                        <h3>Voir aussi</h3>
+                        <h3>{{ labels.see_also }}</h3>
 
                         <ul>
                             {% for link in links %}
