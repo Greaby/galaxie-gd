@@ -9,7 +9,7 @@ tags:
         Collaboration,
         Contemplation,
         Accomplissement,
-        Dragon's dogma,
+        Dragon's Dogma,
         Guerilla Games,
         Gone Home,
         "The Legend of Zelda: Breath of the Wild",
