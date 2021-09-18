@@ -177,8 +177,6 @@ const parseFiles = async () => {
     const min_rank = Math.min(...ranks);
     const max_rank = Math.max(...ranks);
 
-    console.log(min_rank, max_rank);
-
     const MIN_SIZE = 5;
     const MAX_SIZE = 25;
 

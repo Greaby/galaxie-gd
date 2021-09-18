@@ -6,7 +6,7 @@ tags:
         Thatgamecompany,
         Art,
         Oeuvre artistique,
-        PS3,
+        Playstation 3,
         Walking Simulator,
         Minimalisme,
         Montagne,
