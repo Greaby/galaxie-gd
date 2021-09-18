@@ -1,14 +1,15 @@
 let mix = require("laravel-mix");
 var fs = require("fs");
 
-const timestamp = Date.now();
-
 const Twig = require("twig");
 const slugify = require("slugify");
 const Graph = require("graphology");
 
 const generateSigmaJSON = require("./src/javascript/sigma_json");
 const parseMarkdownFile = require("./src/javascript/parse_markdown_file");
+
+const timestamp = Date.now();
+const BASE_SIZE = 3;
 
 const DIR_DIST = "dist";
 const DATA_FOLDER = "data";
@@ -184,6 +185,15 @@ const parseFiles = async () => {
             console.log(`add citation ${source_id}->${slug}`);
             graph.addEdge(source_id, target_id);
         }
+    });
+
+    // set node size
+    graph.forEachNode((node, attributes) => {
+        graph.setNodeAttribute(
+            node,
+            "size",
+            Math.round(BASE_SIZE * Math.sqrt(graph.degree(node)))
+        );
     });
 
     // save main graph

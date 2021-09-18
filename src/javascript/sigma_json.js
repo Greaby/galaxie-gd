@@ -5,7 +5,6 @@ module.exports = (graph) => {
         iterations: 1000,
         settings: {
             gravity: 0.5,
-            //adjustSizes: true,
         },
     });
 
