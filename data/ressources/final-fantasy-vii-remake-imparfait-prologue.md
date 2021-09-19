@@ -4,6 +4,7 @@ tags:
     [
         Final Fantasy VII,
         Final Fantasy VII Remake,
+        Final Fantasy,
         Remake,
         Prologue,
         JRPG,

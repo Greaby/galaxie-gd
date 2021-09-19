@@ -7,7 +7,6 @@ tags:
         Suite,
         Fin,
         Triple A,
-        Jason Schreier,
         Naughty Dog,
         Crunch,
         Rockstar Games,
@@ -34,6 +33,7 @@ tags:
         Dissonance ludonarrative,
         Vengeance,
     ]
+citations: ["author:jason-schreier"]
 ---
 
 # The Last of Us 2, la Suite Superflue
