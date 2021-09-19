@@ -53,7 +53,7 @@ module.exports = class Telescope {
                 title: file_data.env.title,
                 slug: slug,
                 content: file_data.render,
-                tags: file_data.meta.tags,
+                tags: file_data.meta.tags.sort(),
             });
 
             if (!graph.hasNode(id)) {

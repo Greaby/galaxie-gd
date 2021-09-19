@@ -24,7 +24,7 @@ tags:
         Akira Kurosawa,
         David Cage,
         Hideo Kojima,
-        Playstation 4,
+        PlayStation 4,
     ]
 citations: ["ressource:ghost-of-tsushima-la-fin-dune-generation"]
 ---

@@ -10,6 +10,7 @@ tags:
         Square Enix,
         Terrorisme écologique,
         Midgar,
+        Système de combat,
         Combat au tour par tour,
         Action RPG,
         Musique,

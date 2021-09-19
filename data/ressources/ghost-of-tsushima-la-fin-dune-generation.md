@@ -9,8 +9,8 @@ tags:
         Action RPG,
         Triple A,
         Génération de consoles,
-        Playstation 4,
-        Playstation 5,
+        PlayStation 4,
+        PlayStation 5,
         Next gen,
         "The Legend of Zelda: Breath of the Wild",
         The Last of Us,
@@ -19,7 +19,7 @@ tags:
         Illumination globale,
         Brouillard volumétrique,
         Interface diégétique,
-        Combat,
+        Système de combat,
     ]
 ---
 

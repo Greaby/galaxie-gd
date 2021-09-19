@@ -19,7 +19,7 @@ tags:
         Arbre de compétences,
         Planification,
         "The Legend of Zelda: Breath of the Wild",
-        Combat,
+        Système de combat,
         Dark Souls,
         Dragon's Dogma,
         Jesper Kyd,

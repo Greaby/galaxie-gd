@@ -7,8 +7,8 @@ tags:
         Hidetaka Miyazaki,
         From Software,
         Sony,
-        Playstation 3,
-        Playstation 5,
+        PlayStation 3,
+        PlayStation 5,
         Remake,
         Bloodborne,
         Ico,
@@ -17,6 +17,7 @@ tags:
         Level design,
         Bluepoint Games,
     ]
+citations: ["ressource:remakes-and-remasters-bons-ou-mauvais"]
 ---
 
 # Demon's Souls, l'Episode Oublié
@@ -24,5 +25,3 @@ tags:
 On y est enfin, la Playstation 5 a été annoncée avec une belle fournée de jeux next-gen raisonnablement impressionnants. Mais c'est l'annonce du remake de Demon's Souls, le premier jeu de Hidetaka Miyazaki, maintenant patron de From Software, qui m'aura le plus fait réagir.
 
 ![youtube](https://www.youtube.com/watch?v=5AXVjF7TKGw)
-
-TODO : Ajouter citation 9:30
