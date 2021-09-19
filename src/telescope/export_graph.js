@@ -4,6 +4,10 @@ const random = require("graphology-layout/random");
 module.exports = (graph) => {
     random.assign(graph);
 
+    graph.nodes().forEach((node) => {
+        graph.removeNodeAttribute(node, "pagerank");
+    });
+
     forceAtlas2.assign(graph, {
         iterations: 1000,
         settings: {
