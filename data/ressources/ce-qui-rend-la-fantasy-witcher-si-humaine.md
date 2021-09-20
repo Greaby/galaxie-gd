@@ -3,7 +3,7 @@ authors: [NostalGeek]
 tags:
     [
         The Witcher,
-        "The Witcher 3: Wild Hunt",
+        The Witcher 3,
         Andrzej Sapkowski,
         Moralité,
         Héroïsme,

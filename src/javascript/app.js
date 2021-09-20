@@ -1,6 +1,6 @@
 import Graph from "graphology";
 import Sigma from "sigma";
-import { config } from "../../config";
+import config from "../../config";
 
 const loadSigma = async (json_file) => {
     const container = document.querySelector("#graph-container");

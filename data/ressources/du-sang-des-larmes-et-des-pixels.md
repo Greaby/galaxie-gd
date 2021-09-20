@@ -2,7 +2,7 @@
 authors: [Jason Schreier]
 tags:
     [
-        "The Witcher 3: Wild Hunt",
+        The Witcher 3,
         Diablo III,
         Uncharted 4,
         Industrie,
