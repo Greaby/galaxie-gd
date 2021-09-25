@@ -9,7 +9,7 @@ tags:
         Direction artistique,
         Narration,
         Marketing,
-        Echelle sociale,
+        Classe sociale,
         Gravité,
         Musique,
         Exploration,

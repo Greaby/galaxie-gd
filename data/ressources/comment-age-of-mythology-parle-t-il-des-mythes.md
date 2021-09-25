@@ -1,6 +1,7 @@
 ---
 authors: [Beyond Games]
-tags: [
+tags:
+    [
         Age of Mythology,
         Ensemble Studios,
         Age of Empires,
@@ -8,7 +9,7 @@ tags: [
         Récit historique,
         Mythologie nordique,
         Égypte antique,
-        Ragnarök
+        Ragnarök,
         Guerre de Troie,
         Graphisme,
         Cinématique,
