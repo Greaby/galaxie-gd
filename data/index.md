@@ -1,5 +1,3 @@
-# Galaxie GD
-
 Ce projet permet, au travers d’une carte interactive, d’explorer les différentes ressources (vidéo, blog, podcast, etc.) francophones traitant et analysant le jeu vidéo.
 
 Cette documentation est collaborative, chacun est libre de proposer de nouvelles ressources, des modifications et corrections.
