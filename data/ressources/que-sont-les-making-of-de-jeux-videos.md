@@ -22,6 +22,7 @@ tags:
         The Beginner's Guide,
         Davey Wreden,
     ]
+citations: [ressource:wikipedia-jeux-video-commentes]
 ---
 
 # Que sont les making-of de jeux vidéos ?
