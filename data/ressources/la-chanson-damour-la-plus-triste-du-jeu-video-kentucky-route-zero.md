@@ -3,10 +3,12 @@ authors: [Toujours Thomas]
 tags:
     [
         Kentucky Route Zero,
+        Amour,
         Contemplation,
         Histoire,
         Metteur en scène,
         Musique,
+        Chanson,
         Mélancolie,
         Émotion,
     ]
