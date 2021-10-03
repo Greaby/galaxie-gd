@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ language }}">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -22,7 +22,6 @@
         <div class="row">
             <div class="column-1">
                 <div class="content">{{ content }}</div>
-                
 
                 {% if tags %}
                 <div class="tag-container">
@@ -35,9 +34,11 @@
                 <h3>{{ labels.see_also }}</h3>
                 <ul>
                     {% for link in links %}
-                        <li>
-                            <a href="{{ link.type }}-{{ link.slug }}.html">{{ link.title }}</a>
-                        </li>
+                    <li>
+                        <a href="{{ link.type }}-{{ link.slug }}.html">{{
+                            link.title
+                        }}</a>
+                    </li>
                     {% endfor %}
                 </ul>
                 {% endif %}
