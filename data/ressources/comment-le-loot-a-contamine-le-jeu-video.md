@@ -5,6 +5,7 @@ tags: [
         Monétisation,
         Game design,
         Récompense extrinsèque,
+        Progression,
         Diablo,
         Diablo 2,
         Action RPG,
