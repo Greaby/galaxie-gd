@@ -11,6 +11,8 @@ const exportGraph = require("./export_graph");
 const getID = require("./ids");
 const { range } = require("./interpolation");
 
+const { minify } = require("html-minifier");
+
 const exportSitemamp = require("./export_sitemap");
 
 module.exports = class Telescope {
@@ -230,8 +232,8 @@ module.exports = class Telescope {
             Twig.renderFile(
                 "./src/template.twig",
                 {
+                    ...config,
                     timestamp: this.timestamp,
-                    labels: config.labels,
                     title: data.title,
                     content: data.content,
                     links: links,
@@ -239,6 +241,10 @@ module.exports = class Telescope {
                     node: data.id,
                 },
                 (err, html) => {
+                    html = minify(html, {
+                        collapseWhitespace: true,
+                    });
+
                     fs.writeFile(
                         `${config.folders.dist}/${data.type}-${data.slug}.html`,
                         html,
@@ -257,11 +263,15 @@ module.exports = class Telescope {
         Twig.renderFile(
             "./src/template.twig",
             {
+                ...config,
                 timestamp: this.timestamp,
-                labels: config.labels,
                 content: main_data.render,
             },
             (err, html) => {
+                html = minify(html, {
+                    collapseWhitespace: true,
+                });
+
                 fs.writeFile(
                     `${config.folders.dist}/index.html`,
                     html,
