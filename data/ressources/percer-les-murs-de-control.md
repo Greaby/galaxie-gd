@@ -2,7 +2,7 @@
 authors: [NostalGeek]
 tags:
     [
-        Control,
+        Control (jeu),
         Sam Lake,
         Remedy Entertainment,
         Art,

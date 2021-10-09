@@ -8,7 +8,7 @@ authors:
         Hugo GND,
         Marine Pixel Life Stories,
         Cosmografik,
-        Cindy ADB,
+        Quineapple,
     ]
 tags:
     [

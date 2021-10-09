@@ -4,6 +4,7 @@ tags: [
         Loot,
         Monétisation,
         Game design,
+        Récompense,
         Récompense extrinsèque,
         Progression,
         Diablo,

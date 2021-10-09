@@ -2,7 +2,7 @@
 authors: [Toujours Thomas]
 tags:
     [
-        Control,
+        Control (jeu),
         Paranormal,
         Univers,
         Surnaturelle,
