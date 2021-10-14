@@ -1,6 +1,7 @@
 ---
 authors: [NostalGeek]
-tags: [
+tags:
+    [
         Red Dead Redemption,
         Red Dead Redemption 2,
         Portage,
@@ -18,7 +19,7 @@ tags: [
         Moteur de jeu,
         Rage Engine,
         Développement,
-        Difficultés techniques
+        Difficultés techniques,
         Crunch,
         Remake,
     ]

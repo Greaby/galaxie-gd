@@ -1,5 +1,6 @@
 import Graph from "graphology";
 import Sigma from "sigma";
+import Fuse from "fuse.js";
 import config from "../../config";
 
 const loadSigma = async (json_file) => {
@@ -49,6 +50,61 @@ const loadSigma = async (json_file) => {
     });
 };
 
+const loadSearch = async () => {
+    const data = await fetch("./search.json").then((response) =>
+        response.json()
+    );
+
+    const fuse = new Fuse(data, {
+        keys: ["title"],
+        threshold: 0.3,
+        minMatchCharLength: 2,
+    });
+
+    const input_search = document.querySelector("input[type=search]");
+    const search_results = document.querySelector(".search-results");
+
+    if (input_search) {
+        let search_delay = null;
+        input_search.addEventListener("keyup", (event) => {
+            if (search_delay) {
+                clearTimeout(search_delay);
+            }
+            const query = event.currentTarget.value;
+
+            search_delay = setTimeout(() => {
+                if (query.length > 2) {
+                    search_results.classList.add("active");
+
+                    const results = fuse.search(query).slice(0, 8);
+
+                    search_results.innerHTML = null;
+
+                    for (let index = 0; index < results.length; index++) {
+                        const result = results[index];
+
+                        var node = document.createElement("li");
+                        var link = document.createElement("a");
+                        link.innerHTML = result.item.title;
+                        link.setAttribute("href", result.item.url);
+                        node.appendChild(link);
+
+                        search_results.appendChild(node);
+                    }
+                }
+            }, 300);
+        });
+
+        document.body.addEventListener("click", (_event) => {
+            search_results.classList.remove("active");
+        });
+
+        search_results.addEventListener("click", (event) => {
+            event.stopPropagation();
+        });
+    }
+};
+
 window.addEventListener("DOMContentLoaded", function () {
     let json_file = "./index.json";
     let path = window.location.href.split("/").pop();
@@ -58,4 +114,5 @@ window.addEventListener("DOMContentLoaded", function () {
     }
 
     loadSigma(json_file);
+    loadSearch();
 });

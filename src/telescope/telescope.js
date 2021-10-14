@@ -14,6 +14,7 @@ const { range } = require("./interpolation");
 const { minify } = require("html-minifier");
 
 const exportSitemamp = require("./export_sitemap");
+const exportSearch = require("./export_search");
 
 module.exports = class Telescope {
     files_to_render = [];
@@ -35,7 +36,7 @@ module.exports = class Telescope {
 
         const graph = this.graph;
 
-        let sitemap_links = [];
+        let export_links = [];
 
         const fileNames = await fs.promises.readdir(config.folders.ressources);
 
@@ -226,7 +227,8 @@ module.exports = class Telescope {
                 .sort((a, b) => (a.rank > b.rank ? -1 : 1))
                 .slice(0, 5);
 
-            sitemap_links.push({
+            export_links.push({
+                title: data.title,
                 url: `${data.type}-${data.slug}.html`,
             });
             Twig.renderFile(
@@ -259,7 +261,7 @@ module.exports = class Telescope {
         // save index.html
         let main_data = await parseMarkdown(`${config.folders.data}/index.md`);
 
-        sitemap_links.push({ url: "index.html" });
+        export_links.push({ url: "index.html" });
         Twig.renderFile(
             "./src/template.twig",
             {
@@ -282,7 +284,8 @@ module.exports = class Telescope {
             }
         );
 
-        exportSitemamp(sitemap_links);
+        exportSitemamp(export_links);
+        exportSearch(export_links);
 
         // save sub graphs
         graph.forEachNode((node, attributes) => {

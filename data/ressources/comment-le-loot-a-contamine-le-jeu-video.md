@@ -1,6 +1,7 @@
 ---
 authors: [Game Next Door, Hugo GND, Maxime GND]
-tags: [
+tags:
+    [
         Loot,
         Monétisation,
         Game design,
@@ -22,7 +23,7 @@ tags: [
         World of Warcraft,
         Loot box,
         Borderlands,
-        Looter shooter
+        Looter shooter,
         Destiny,
         Bungie,
         Activision Blizzard,
