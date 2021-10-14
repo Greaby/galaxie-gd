@@ -6,7 +6,6 @@ tags:
         Livres dont vous êtes le héros,
         Livre-jeu,
         Intéractivité,
-        Clémentine Soulard–Pignon,
         RPG,
         Choix ludique,
         Choix narratif,
@@ -30,6 +29,11 @@ tags:
         Émotion,
         The Red Strings Club,
     ]
+citations:
+    [
+        "ressource:lillusion-de-choix-dans-les-jeux-video-narratifs",
+        "author:clementine-soulard-pignon",
+    ]
 ---
 
 # Que cachent nos choix dans les jeux vidéo ?
@@ -38,5 +42,6 @@ Le choix dans le jeu vidéo est un sujet qui est souvent évoqué au sein de la 
 
 ![youtube](https://www.youtube.com/watch?v=1NI5UJMZjAM)
 
-TODO ajouter citation : L’illusion de choix dans le jeu vidéo par Clémentine Soulard-Pignon
 TODO ajouter citation : L’importance du choix au coeur du jeu vidéo: http://www.chroniques-ludiques.fr
+TODO ajouter : https://journals.openedition.org/cm/3522#ftn6
+TODO ajouter : https://journals.openedition.org/cm/3522#ftn6

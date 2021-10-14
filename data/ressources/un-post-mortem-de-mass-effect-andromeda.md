@@ -38,6 +38,7 @@ tags:
         Dialogue,
         MacGuffin,
     ]
+citations: ["ressource:skyrim-un-mauvais-rpg"]
 ---
 
 # Un Post-Mortem de Mass Effect Andromeda
@@ -45,5 +46,3 @@ tags:
 Vous l'avez demandé, NostalGeek a délivré ! Voici ma critique sur le mal aimé Mass Effect Andromeda. Tentons ensemble de déterminer comment le jeu en est arrivé à son statut d'épisode haï, en commençant par son développement.
 
 ![youtube](https://www.youtube.com/watch?v=vQKBl2er32o)
-
-TODO : ajoutr citation https://www.youtube.com/watch?v=ltQELRX61iA
