@@ -14,6 +14,7 @@ module.exports = {
     labels: {
         project_title: "Galaxie GD",
         see_also: "Voir aussi",
+        search: "Rechercher",
     },
 
     graph: {
