@@ -72,8 +72,8 @@ const loadSearch = async () => {
             }
             const query = event.currentTarget.value;
 
-            search_delay = setTimeout(() => {
-                if (query.length > 2) {
+            if (query.length > 2) {
+                search_delay = setTimeout(() => {
                     search_results.classList.add("active");
 
                     const results = fuse.search(query).slice(0, 8);
@@ -91,8 +91,10 @@ const loadSearch = async () => {
 
                         search_results.appendChild(node);
                     }
-                }
-            }, 300);
+                }, 300);
+            } else {
+                search_results.classList.remove("active");
+            }
         });
 
         document.body.addEventListener("click", (_event) => {
