@@ -1,6 +1,16 @@
 ---
 authors: [Ex Serv]
-tags: [Metacritic, Test, Embargo, Industrie, Journalisme, Cyberpunk 2077, Sony]
+tags:
+    [
+        Metacritic,
+        Test de jeu,
+        Note de jeu,
+        Embargo,
+        Industrie,
+        Journalisme,
+        Cyberpunk 2077,
+        Sony,
+    ]
 ---
 
 # Un peu de Contexte : Les tests de jeux vidéo, Metacritic : un score pour les gouverner tous
