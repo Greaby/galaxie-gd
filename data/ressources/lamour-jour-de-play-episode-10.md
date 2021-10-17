@@ -4,9 +4,9 @@ authors:
         Jour de Play,
         ARTE,
         Olbius,
-        Sofia Game Spectrum,
-        Hugo GND,
-        Marine Pixel Life Stories,
+        Sofia (Game Spectrum),
+        Hugo (GND),
+        Marine (Pixel Life Stories),
         Cosmografik,
         Quineapple,
     ]

@@ -37,7 +37,7 @@ const loadSigma = async (json_file) => {
     });
 
     const settings = {
-        labelRenderedSizeThreshold: 15,
+        labelRenderedSizeThreshold: 16,
         defaultEdgeColor: "#e2e8f0",
     };
 

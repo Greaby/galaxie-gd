@@ -1,5 +1,5 @@
 ---
-authors: [Game Next Door, Hugo GND, Maxime GND]
+authors: [Game Next Door, Hugo (GND), Maxime (GND)]
 tags:
     [
         Connaissance,

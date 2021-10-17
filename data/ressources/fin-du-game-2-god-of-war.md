@@ -1,5 +1,5 @@
 ---
-authors: [Fin Du Game, Ex Serv, Hugo GND, Maxime GND]
+authors: [Fin Du Game, Ex Serv, Hugo (GND), Maxime (GND)]
 tags: [God of War]
 ---
 

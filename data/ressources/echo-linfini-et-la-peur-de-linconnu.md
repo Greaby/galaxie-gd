@@ -5,6 +5,7 @@ tags:
         Echo (jeu),
         Horreur,
         Horreur cosmique,
+        Peur,
         Peur de l'inconnu,
         Architecture,
         Architecture baroque,

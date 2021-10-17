@@ -5,7 +5,7 @@ tags:
         Bioshock,
         Bioshock 2,
         Ken Levine,
-        Worldbuilding,
+        World building,
         Utopie,
         Dystopie,
         Objectivisme (Ayn Rand),
