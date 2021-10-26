@@ -1,4 +1,4 @@
-# Paysage GD
+# Galaxie GD
 
 <p>
     <a href="https://github.com/Greaby/galaxie-gd/issues">
