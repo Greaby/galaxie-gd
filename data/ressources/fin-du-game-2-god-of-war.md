@@ -10,3 +10,5 @@ Fin Du Game, s'intéresse cette fois-ci à God of War, célébré comme étant l
 ![youtube](https://www.youtube.com/watch?v=1okDUSZKNuc)
 
 ![spotify](https://open.spotify.com/episode/7BeSPhDoInkpfswOYSu21y)
+
+TODO : Ajouter les tags

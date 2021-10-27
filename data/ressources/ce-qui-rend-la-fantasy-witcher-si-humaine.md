@@ -25,4 +25,6 @@ tags:
 
 # Ce qui rend la fantasy Witcher si Humaine
 
+A l'occasion de la fin de cette décennie (et de la sortie de la série Netflix), j'ai décidé de vous parler de la fantasy Witcher, en référence aux jeux, mais également aux bouquins, que je vous conseille ardemment. Elle se différencie des autres par son ton plus terre à terre, et finalement, son humanité.
+
 ![youtube](https://www.youtube.com/watch?v=_WTup5RiOkc)

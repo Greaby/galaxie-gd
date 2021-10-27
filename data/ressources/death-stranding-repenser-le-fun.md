@@ -29,4 +29,6 @@ tags:
 
 # Death Stranding : Repenser le Fun
 
+Beaucoup de choses ont déjà été dites sur Death Stranding, le premier jeu de Kojima Productions. Si il y a à mon avis du mauvais dans cette expérimentation, il y a aussi beaucoup de bon. L'existence de DS prouve que l'on peut encore innover dans le milieu du gaming AAA. Voilà mon avis.
+
 ![youtube](https://www.youtube.com/watch?v=FH8h1ZzBZB0)

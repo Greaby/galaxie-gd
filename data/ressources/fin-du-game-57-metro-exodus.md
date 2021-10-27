@@ -10,3 +10,5 @@ Pour ce 3ème opus, la série Metro sort des souterrains pour nous faire travers
 ![youtube](https://www.youtube.com/watch?v=ZGDkF9jptmg)
 
 ![spotify](https://open.spotify.com/episode/2EfeTxGgF8M17Fur3icP5V?si=c8e3af6dd38844ca)
+
+TODO : Ajouter les tags
