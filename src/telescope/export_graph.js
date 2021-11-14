@@ -4,7 +4,7 @@ const random = require("graphology-layout/random");
 module.exports = (graph) => {
     random.assign(graph);
 
-    graph.nodes().forEach((node) => {
+    graph.forEachNode((node, _attr) => {
         if (graph.getNodeAttribute(node, "isolated")) {
             graph.dropNode(node);
         }
@@ -18,7 +18,7 @@ module.exports = (graph) => {
     });
 
     // Optimization of the JSON file size
-    graph.nodes().forEach((node) => {
+    graph.forEachNode((node, _attr) => {
         graph.removeNodeAttribute(node, "pagerank");
         graph.updateNodeAttribute(node, "x", (x) => Math.round(x));
         graph.updateNodeAttribute(node, "y", (y) => Math.round(y));

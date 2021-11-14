@@ -157,7 +157,7 @@ module.exports = class Telescope {
         });
 
         if (config.hide_isolated_tags) {
-            graph.nodes().forEach((node) => {
+            graph.forEachNode((node, _attr) => {
                 if (
                     graph.degree(node) <= config.isolated_tags_threshold &&
                     graph.getNodeAttribute(node, "cat") === "tag"
@@ -330,8 +330,7 @@ module.exports = class Telescope {
         const graph = this.graph;
 
         const ranks = graph
-            .nodes()
-            .map((node) => {
+            .mapNodes((node) => {
                 return graph.getNodeAttribute(node, "pagerank");
             })
             .filter((x) => x);
