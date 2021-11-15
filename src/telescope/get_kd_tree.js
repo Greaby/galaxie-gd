@@ -26,5 +26,12 @@ module.exports = (graph) => {
             };
         });
 
+    // Optimization for the JSON file size
+    kd_tree_graph.forEachNode((node, _attr) => {
+        kd_tree_graph.removeNodeAttribute(node, "pagerank");
+        kd_tree_graph.updateNodeAttribute(node, "x", (x) => Math.round(x));
+        kd_tree_graph.updateNodeAttribute(node, "y", (y) => Math.round(y));
+    });
+
     return [new kdTree(points, distance, ["x", "y"]), kd_tree_graph];
 };
