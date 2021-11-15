@@ -200,14 +200,17 @@ module.exports = class Telescope {
                     6
                 )
                 .filter(([item, _distance]) => item.id != data.id)
+                .sort(
+                    ([_a, a_distance], [_b, b_distance]) =>
+                        a_distance - b_distance
+                )
                 .map(([item, _distance]) => {
                     return {
                         cat: graph.getNodeAttribute(item.id, "cat"),
                         slug: graph.getNodeAttribute(item.id, "slug"),
                         title: graph.getNodeAttribute(item.id, "label"),
                     };
-                })
-                .reverse();
+                });
 
             let added_nodes = [];
             if (graph.hasNode(data.id)) {
