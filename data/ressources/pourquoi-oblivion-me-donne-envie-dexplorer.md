@@ -7,7 +7,7 @@ tags:
         The Elder Scrolls,
         Morrowind,
         Skyrim,
-        RPG,
+        Jeu de rôle (RPG),
         Daggerfall,
         Xbox,
         Xbox 360,

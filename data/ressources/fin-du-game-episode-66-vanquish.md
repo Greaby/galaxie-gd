@@ -1,6 +1,15 @@
 ---
 authors: [Fin Du Game, Ex Serv, Hugo (GND), Maxime (GND)]
-tags: [Vanquish, Cover shooter, Triple A, Shinji Mikami, Platinum Games, Sega]
+tags:
+    [
+        Vanquish,
+        FPS,
+        Cover shooter,
+        Triple A,
+        Shinji Mikami,
+        Platinum Games,
+        Sega,
+    ]
 citations:
     [
         "ressource:fin-du-game-episode-22-resident-evil-2-remake",

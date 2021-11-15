@@ -4,7 +4,7 @@ tags:
     [
         Skyrim,
         The Elder Scrolls,
-        RPG,
+        Jeu de rôle (RPG),
         Bethesda,
         Open world,
         Game design,

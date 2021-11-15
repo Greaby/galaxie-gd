@@ -4,7 +4,7 @@ tags:
     [
         Disco Elysium,
         "Disco Elysium - The Final Cut",
-        RPG,
+        Jeu de rôle (RPG),
         CRPG,
         "ZA/UM",
         Estonie,

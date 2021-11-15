@@ -8,7 +8,7 @@ tags:
         Skyblivion,
         Skywind,
         Oblivion,
-        RPG,
+        Jeu de rôle (RPG),
         Remake,
         Rebelzize,
         Bethesda,

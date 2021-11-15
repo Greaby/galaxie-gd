@@ -34,7 +34,7 @@ tags:
         Histoire,
         Scénario,
         Colonisation,
-        RPG,
+        Jeu de rôle (RPG),
         Dialogue,
         MacGuffin,
     ]

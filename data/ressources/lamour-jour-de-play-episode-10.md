@@ -50,7 +50,7 @@ tags:
     ]
 ---
 
-# L’Amour 💖 | Jour de Play | Episode 10
+# L’Amour 💖 | Jour de Play | Épisode 10
 
 L’Amour dans les jeux vidéo : Sofia, Hugo et Marine décortiquent ensemble notre ferveur du médium vidéoludique.
 

@@ -13,7 +13,7 @@ tags:
         Personnage,
         Histoire,
         Moralité,
-        RPG,
+        Jeu de rôle (RPG),
         Espace,
     ]
 ---

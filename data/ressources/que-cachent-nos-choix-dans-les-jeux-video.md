@@ -6,7 +6,7 @@ tags:
         Livres dont vous êtes le héros,
         Livre-jeu,
         Intéractivité,
-        RPG,
+        Jeu de rôle (RPG),
         Choix ludique,
         Choix narratif,
         Mass effect,
