@@ -1,6 +1,8 @@
 module.exports = {
     base_url: "https://greaby.github.io/galaxie-gd/",
 
+    seed: "galaxie-gd",
+
     language: "fr",
 
     folders: {

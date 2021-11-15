@@ -27,6 +27,7 @@
         "resolve-url-loader": "^4.0.0",
         "sass": "^1.43.4",
         "sass-loader": "^12.3.0",
+        "seedrandom": "^3.0.5",
         "sitemap": "^7.0.0",
         "slugify": "^1.6.2",
         "stream-http": "^3.2.0",
