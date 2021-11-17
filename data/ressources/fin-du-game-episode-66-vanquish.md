@@ -1,5 +1,5 @@
 ---
-authors: [Fin Du Game, Ex Serv, Hugo (GND), Maxime (GND)]
+authors: [Ex Serv, Hugo (GND), Maxime (GND)]
 tags:
     [
         Vanquish,

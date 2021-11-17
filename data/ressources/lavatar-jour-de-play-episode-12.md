@@ -1,14 +1,5 @@
 ---
-authors:
-    [
-        Jour de Play,
-        ARTE,
-        Olbius,
-        Sofia (Game Spectrum),
-        Hugo (GND),
-        Nat’Ali,
-        Quineapple,
-    ]
+authors: [ARTE, Olbius, Sofia (Game Spectrum), Hugo (GND), Nat’Ali, Quineapple]
 tags:
     [
         Avatar vidéoludique,

@@ -1,7 +1,6 @@
 ---
 authors:
     [
-        Jour de Play,
         ARTE,
         Olbius,
         Sofia (Game Spectrum),
