@@ -23,7 +23,7 @@ tags:
         Dating Simulator,
         Sentiment,
         Émotion,
-        Lien Social,
+        Lien social,
         Interaction sociale,
         Jeu coopératif,
         Multijoueur,

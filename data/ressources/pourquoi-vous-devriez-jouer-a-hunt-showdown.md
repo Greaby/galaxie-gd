@@ -8,6 +8,7 @@ tags:
         Crytek,
         Crysis,
         Fortnite,
+        Call of Duty,
         "Call of Duty: Warzone",
         Dead by Daylight,
         Left 4 Dead,

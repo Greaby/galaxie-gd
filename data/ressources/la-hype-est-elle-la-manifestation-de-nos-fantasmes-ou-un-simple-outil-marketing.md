@@ -15,6 +15,7 @@ tags:
         The Last Guardian,
         Shenmue 3,
         Mass Effect Andromeda,
+        Dishonored,
         Dishonored 2,
         Réseau social,
         Journalisme,
