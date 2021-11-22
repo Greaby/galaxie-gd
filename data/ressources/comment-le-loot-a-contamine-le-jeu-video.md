@@ -35,6 +35,7 @@ tags:
         Battle royale,
         Fortnite,
         PlayerUnknown's Battlegrounds,
+        Compétition,
         Apex Legends,
         Gashapon,
         Gacha,

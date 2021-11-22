@@ -8,6 +8,7 @@ tags:
         FPS,
         Portal,
         Communication,
+        Compétition,
         Équipe,
         Individualisme,
         Interaction sociale,
