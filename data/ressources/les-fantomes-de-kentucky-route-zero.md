@@ -1,6 +1,6 @@
 ---
-authors: [NostalGeek]
-tags:
+author: [NostalGeek]
+tag:
     [
         Kentucky Route Zero,
         Contemplation,

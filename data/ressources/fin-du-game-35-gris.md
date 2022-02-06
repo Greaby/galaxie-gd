@@ -1,6 +1,6 @@
 ---
-authors: [Ex Serv, Hugo (GND), Maxime (GND)]
-tags: [Gris]
+author: [Ex Serv, Hugo (GND), Maxime (GND)]
+tag: [Gris]
 ---
 
 # Fin Du Game - Épisode 35 - Gris

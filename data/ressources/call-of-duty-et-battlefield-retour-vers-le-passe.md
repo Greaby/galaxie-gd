@@ -1,7 +1,7 @@
 ---
-authors:
+author:
     [Romain Vincent, Rémi Cayatte, Oscar Lemaire, Antoine Maillard, Julien Lalu]
-tags:
+tag:
     [
         Call of Duty,
         Battlefield,

@@ -1,6 +1,6 @@
 ---
-authors: [Lys Sombreciel]
-tags:
+author: [Lys Sombreciel]
+tag:
     [
         "Greak: Memories of Azur",
         Navegante,

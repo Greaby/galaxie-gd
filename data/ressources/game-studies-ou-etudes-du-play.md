@@ -1,6 +1,6 @@
 ---
-authors: [Mathieu Triclot]
-tags: [Jesper Juul, Game studies, Épistémologie]
+author: [Mathieu Triclot]
+tag: [Jesper Juul, Game studies, Épistémologie]
 citations: ["author:jacques-henriot", "ressource:le-jeu-jacques-henriot"]
 ---
 

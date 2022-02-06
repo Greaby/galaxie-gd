@@ -1,6 +1,5 @@
 ---
-authors: []
-tags: [Développement, Making-of, Commentaire audio, Audioguide]
+tag: [Développement, Making-of, Commentaire audio, Audioguide]
 ---
 
 # Liste des jeux vidéo commentés

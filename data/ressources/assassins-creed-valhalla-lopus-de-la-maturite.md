@@ -1,6 +1,6 @@
 ---
-authors: [NostalGeek]
-tags:
+author: [NostalGeek]
+tag:
     [
         Assassin's Creed Valhalla,
         Assassin's Creed,

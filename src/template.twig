@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="{{ language }}">
+<html lang="{{ config.language }}">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,26 +11,23 @@
 
         <script src="./js/app.js?{{ timestamp }}"></script>
         <title>
-            {% if title %}{{ title }} - {% endif %}{{ labels.project_title }}
+            {% if title %}{{ title }} - {% endif %}{{
+                config.labels.project_title
+            }}
         </title>
-
-        <meta
-            name="google-site-verification"
-            content="xjRWJ9eWzKcmn9Zp8Xc9KB7-LZDsERDnAkbFxl-Otew"
-        />
     </head>
     <body>
         <ul class="search-results"></ul>
 
         <header>
             <a href="index.html">
-                <h3>{{ labels.project_title }}</h3>
+                <h3>{{ config.labels.project_title }}</h3>
             </a>
 
             <input
                 type="search"
                 name="search"
-                placeholder="{{ labels.search }}"
+                placeholder="{{ config.labels.search }}"
             />
         </header>
 
@@ -38,28 +35,44 @@
             <div class="column-1">
                 <div class="content">{{ content }}</div>
 
-                {% if tags %}
-                <div class="tag-container">
-                    <h3>Tags</h3>
-                    {% for tag in tags %}
-                    <span class="tag">{{ tag }}</span>
-                    {% endfor %}
-                </div>
-                {% endif %} {% if links %}
-                <h3>{{ labels.see_also }}</h3>
-                <ul>
-                    {% for link in links %}
-                    <li>
-                        <a href="{{ link.cat }}-{{ link.slug }}.html">{{
-                            link.title
+                <div class="metadata">
+                    {% if metadata %} {% for cat, data in metadata %} {% if
+                    config.metadata[cat] == undefined or
+                    config.metadata[cat].display_on_page %}
+                    <div class="tag-container">
+                        <h3>
+                            {% if config.metadata[cat].label %}
+                            {{ config.metadata[cat].label }}
+                            {% else %}
+                            {{ cat }}
+                            {% endif %}
+                        </h3>
+                        {% for item in data %}
+                        <a href="{{ item.link }}" class="tag">{{
+                            item.title
                         }}</a>
-                    </li>
-                    {% endfor %}
-                </ul>
-                {% endif %}
+                        {% endfor %}
+                    </div>
+                    {% endif %} {% endfor %} {% endif %}
+                </div>
+
+                <div class="links">
+                    {% if links %}
+                    <h3>{{ config.labels.see_also }}</h3>
+                    <ul>
+                        {% for link in links %}
+                        <li>
+                            <a href="{{ link.cat }}-{{ link.slug }}.html">{{
+                                link.title
+                            }}</a>
+                        </li>
+                        {% endfor %}
+                    </ul>
+                    {% endif %}
+                </div>
             </div>
             <div class="column-2">
-                <div id="graph-container" data-node="{{ node }}"></div>
+                <div id="graph-container" data-node="{{ id }}"></div>
             </div>
         </div>
     </body>

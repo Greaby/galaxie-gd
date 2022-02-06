@@ -1,6 +1,6 @@
 ---
-authors: [Sofia (Game Spectrum)]
-tags: ["The Legend of Zelda: Breath of the Wild", liberté, Exploration]
+author: [Sofia (Game Spectrum)]
+tag: ["The Legend of Zelda: Breath of the Wild", liberté, Exploration]
 ---
 
 # Comment Zelda Breath of the Wild nous parle de liberté

@@ -1,6 +1,6 @@
 ---
-authors: [Ex Serv, Hugo (GND), Maxime (GND)]
-tags: [Bloodborne, From Software, Dark Souls, Hidetaka Miyazaki]
+author: [Ex Serv, Hugo (GND), Maxime (GND)]
+tag: [Bloodborne, From Software, Dark Souls, Hidetaka Miyazaki]
 citations: []
 ---
 

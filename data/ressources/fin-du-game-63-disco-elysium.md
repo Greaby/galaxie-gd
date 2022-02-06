@@ -1,6 +1,6 @@
 ---
-authors: [Ex Serv, Hugo (GND), Maxime (GND)]
-tags:
+author: [Ex Serv, Hugo (GND), Maxime (GND)]
+tag:
     [
         Disco Elysium,
         "Disco Elysium - The Final Cut",

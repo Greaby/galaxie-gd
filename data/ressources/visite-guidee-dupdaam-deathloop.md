@@ -1,6 +1,6 @@
 ---
-authors: [Toujours Thomas]
-tags: [Deathloop, Tourisme virtuel, Updaam]
+author: [Toujours Thomas]
+tag: [Deathloop, Tourisme virtuel, Updaam]
 ---
 
 # Visite Guidée d'Updaam (Deathloop)

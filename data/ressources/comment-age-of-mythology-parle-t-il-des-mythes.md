@@ -1,6 +1,6 @@
 ---
-authors: [Beyond Games]
-tags:
+author: [Beyond Games]
+tag:
     [
         Age of Mythology,
         Ensemble Studios,

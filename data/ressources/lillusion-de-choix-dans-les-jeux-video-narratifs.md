@@ -1,6 +1,6 @@
 ---
-authors: [Clémentine Soulard-Pignon]
-tags: [Game design, Choix, Narration]
+author: [Clémentine Soulard-Pignon]
+tag: [Game design, Choix, Narration]
 ---
 
 # L'illusion De Choix Dans Les Jeux Vidéo Narratifs

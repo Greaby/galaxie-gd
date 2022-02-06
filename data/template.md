@@ -1,6 +1,6 @@
 ---
-authors: [Auteur 1, Auteur 2]
-tags: [Tag 1, Tag 2, Tag 3]
+author: [Auteur 1, Auteur 2]
+tag: [Tag 1, Tag 2, Tag 3]
 ---
 
 # Titre

@@ -1,6 +1,6 @@
 ---
-authors: [Marine (Pixel Life Stories)]
-tags:
+author: [Marine (Pixel Life Stories)]
+tag:
     [
         Horizon Zero Dawn,
         Aloy,

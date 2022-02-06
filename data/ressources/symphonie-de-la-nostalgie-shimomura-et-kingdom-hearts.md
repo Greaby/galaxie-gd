@@ -1,6 +1,6 @@
 ---
-authors: [Lys Sombreciel]
-tags:
+author: [Lys Sombreciel]
+tag:
     [
         Kingdom Hearts,
         Disney,

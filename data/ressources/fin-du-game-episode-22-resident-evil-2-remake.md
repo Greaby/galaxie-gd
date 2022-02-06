@@ -1,6 +1,6 @@
 ---
-authors: [Ex Serv, Hugo (GND), Maxime (GND)]
-tags: [Resident Evil 2, Remake, Capcom, Survival horror]
+author: [Ex Serv, Hugo (GND), Maxime (GND)]
+tag: [Resident Evil 2, Remake, Capcom, Survival horror]
 ---
 
 # Fin Du Game - Épisode 22 - Resident Evil 2 (Remake)

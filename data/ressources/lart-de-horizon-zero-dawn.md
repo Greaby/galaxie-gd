@@ -1,6 +1,6 @@
 ---
-authors: [Paul Davies, 404 Éditions]
-tags:
+author: [Paul Davies, 404 Éditions]
+tag:
     [
         Horizon Zero Dawn,
         Guerrilla Games,

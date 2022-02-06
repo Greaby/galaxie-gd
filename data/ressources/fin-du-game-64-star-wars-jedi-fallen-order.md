@@ -1,6 +1,6 @@
 ---
-authors: [Ex Serv, Hugo (GND), Maxime (GND)]
-tags:
+author: [Ex Serv, Hugo (GND), Maxime (GND)]
+tag:
     [
         "Star Wars Jedi: Fallen Order",
         Star Wars,

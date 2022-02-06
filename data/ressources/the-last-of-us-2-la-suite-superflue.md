@@ -1,6 +1,6 @@
 ---
-authors: [NostalGeek]
-tags:
+author: [NostalGeek]
+tag:
     [
         The Last of Us,
         The Last of Us Part II,

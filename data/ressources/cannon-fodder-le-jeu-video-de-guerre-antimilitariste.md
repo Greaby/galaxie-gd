@@ -1,6 +1,6 @@
 ---
-authors: [Rémi Cayatte]
-tags:
+author: [Rémi Cayatte]
+tag:
     [
         Cannon Fodder,
         Guerre,

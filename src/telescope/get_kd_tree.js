@@ -9,7 +9,7 @@ module.exports = (graph) => {
     let kd_tree_graph = graph.copy();
 
     kd_tree_graph.forEachNode((node, attributes) => {
-        if (attributes.isolated) {
+        if (attributes.hidden) {
             kd_tree_graph.dropNode(node);
         }
     });
@@ -27,7 +27,7 @@ module.exports = (graph) => {
         });
 
     // Optimization for the JSON file size
-    kd_tree_graph.forEachNode((node, _attr) => {
+    kd_tree_graph.forEachNode((node, _attributes) => {
         kd_tree_graph.removeNodeAttribute(node, "pagerank");
         kd_tree_graph.updateNodeAttribute(node, "x", (x) => Math.round(x));
         kd_tree_graph.updateNodeAttribute(node, "y", (y) => Math.round(y));

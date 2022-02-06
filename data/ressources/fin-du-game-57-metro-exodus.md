@@ -1,6 +1,6 @@
 ---
-authors: [Ex Serv, Hugo (GND), Maxime (GND)]
-tags: [Metro Exodus]
+author: [Ex Serv, Hugo (GND), Maxime (GND)]
+tag: [Metro Exodus]
 ---
 
 # Fin Du Game - Épisode 57 - Metro Exodus

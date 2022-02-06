@@ -1,6 +1,6 @@
 ---
-authors: [Ex Serv, Hugo (GND), Maxime (GND)]
-tags: [God of War]
+author: [Ex Serv, Hugo (GND), Maxime (GND)]
+tag: [God of War]
 ---
 
 # Fin Du Game - Épisode 2 - God of War

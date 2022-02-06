@@ -1,6 +1,6 @@
 ---
-authors: [Jacques Henriot]
-tags: [Game studies]
+author: [Jacques Henriot]
+tag: [Game studies]
 ---
 
 # Le jeu

@@ -1,6 +1,6 @@
 ---
-authors: [Horreur 404]
-tags:
+author: [Horreur 404]
+tag:
     [
         Silent Hill,
         "Silent Hill: Shattered Memories",

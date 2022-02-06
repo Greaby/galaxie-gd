@@ -1,6 +1,6 @@
 ---
-authors: [Romain Vincent]
-tags:
+author: [Romain Vincent]
+tag:
     [
         Guerre,
         Guerre mondiale,

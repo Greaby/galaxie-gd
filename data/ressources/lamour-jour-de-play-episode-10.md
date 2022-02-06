@@ -1,5 +1,5 @@
 ---
-authors:
+author:
     [
         ARTE,
         Olbius,
@@ -9,7 +9,7 @@ authors:
         Cosmografik,
         Quineapple,
     ]
-tags:
+tag:
     [
         Amour,
         Jason Rohrer,

@@ -1,6 +1,6 @@
 ---
-authors: [Romain Vincent]
-tags: [Cannon Fodder, Guerre, Antimilitarisme, Call of Duty, Historique]
+author: [Romain Vincent]
+tag: [Cannon Fodder, Guerre, Antimilitarisme, Call of Duty, Historique]
 citations:
     [
         "author:remi-cayatte",

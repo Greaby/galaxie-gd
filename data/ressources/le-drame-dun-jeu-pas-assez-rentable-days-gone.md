@@ -1,6 +1,6 @@
 ---
-authors: [Exitium Film]
-tags:
+author: [Exitium Film]
+tag:
     [
         Days Gone,
         Open World,

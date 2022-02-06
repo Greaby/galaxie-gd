@@ -1,16 +1,14 @@
 module.exports = {
     base_url: "https://greaby.github.io/galaxie-gd/",
 
-    seed: "galaxie-gd",
-
     language: "fr",
+
+    seed: "galaxie-gd",
 
     folders: {
         dist: "dist",
         data: "data",
         ressources: "data/ressources",
-        tags: "data/tags",
-        authors: "data/authors",
     },
 
     labels: {
@@ -19,11 +17,33 @@ module.exports = {
         search: "Rechercher",
     },
 
+    ressource: {
+        color: "#D24335",
+    },
+
+    current_node: {
+        color: "#F2C84B",
+    },
+
+    metadata: {
+        tag: {
+            label: "Tags",
+            color: "#87AA66",
+            display_on_page: true,
+            display_on_graph: true,
+        },
+        author: {
+            label: "Auteur·e·s",
+            color: "#4CB3D2",
+            display_on_page: true,
+            display_on_graph: true,
+        },
+    },
+    hide_isolated_metadata: true,
+    isolated_metadata_threshold: 2,
+
     graph: {
         node_min_size: 5,
         node_max_size: 25,
     },
-
-    hide_isolated_tags: true,
-    isolated_tags_threshold: 2,
 };

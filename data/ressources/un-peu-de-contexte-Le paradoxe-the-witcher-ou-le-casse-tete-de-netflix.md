@@ -1,6 +1,6 @@
 ---
-authors: [Ex Serv]
-tags: [The Witcher, Netflix, CD Projekt Red, Andrzej Sapkowski]
+author: [Ex Serv]
+tag: [The Witcher, Netflix, CD Projekt Red, Andrzej Sapkowski]
 ---
 
 # Un peu de Contexte - Le paradoxe The Witcher ou le casse tête de Netflix

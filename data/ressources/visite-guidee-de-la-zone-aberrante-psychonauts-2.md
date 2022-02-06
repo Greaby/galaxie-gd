@@ -1,6 +1,6 @@
 ---
-authors: [Toujours Thomas]
-tags: [Psychonauts 2, Tourisme virtuel, Zone Aberrante]
+author: [Toujours Thomas]
+tag: [Psychonauts 2, Tourisme virtuel, Zone Aberrante]
 ---
 
 # Visite Guidée de la Zone Aberrante (Psychonauts 2)

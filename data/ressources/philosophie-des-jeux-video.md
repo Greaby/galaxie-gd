@@ -1,6 +1,6 @@
 ---
-authors: [Mathieu Triclot]
-tags: [Game studies]
+author: [Mathieu Triclot]
+tag: [Game studies]
 ---
 
 # Philosophie des jeux vidéo

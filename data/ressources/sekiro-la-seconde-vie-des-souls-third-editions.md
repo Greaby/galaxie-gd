@@ -1,7 +1,6 @@
 ---
-authors: [Third Éditions, Ludovic Castro]
-tags:
-    ["Sekiro: Shadows Die Twice", From Software, Dark Souls, Hidetaka Miyazaki]
+author: [Third Éditions, Ludovic Castro]
+tag: ["Sekiro: Shadows Die Twice", From Software, Dark Souls, Hidetaka Miyazaki]
 citations: []
 ---
 

@@ -1,6 +1,6 @@
 ---
-authors: [ARTE, Olbius, Sofia (Game Spectrum), Hugo (GND), Nat’Ali, Quineapple]
-tags:
+author: [ARTE, Olbius, Sofia (Game Spectrum), Hugo (GND), Nat’Ali, Quineapple]
+tag:
     [
         Avatar vidéoludique,
         Jeu de rôle (RPG),

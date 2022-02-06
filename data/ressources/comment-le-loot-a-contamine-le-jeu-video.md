@@ -1,6 +1,6 @@
 ---
-authors: [Hugo (GND), Maxime (GND)]
-tags:
+author: [Hugo (GND), Maxime (GND)]
+tag:
     [
         Loot,
         Monétisation,

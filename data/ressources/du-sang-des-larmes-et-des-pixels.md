@@ -1,6 +1,6 @@
 ---
-authors: [Jason Schreier]
-tags:
+author: [Jason Schreier]
+tag:
     [
         The Witcher 3,
         Diablo III,

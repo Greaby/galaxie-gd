@@ -1,6 +1,6 @@
 ---
-authors: [Pier-re, Ryo, Yue]
-tags: [Kingdom Hearts]
+author: [Pier-re, Ryo, Yue]
+tag: [Kingdom Hearts]
 citations: ["ressource:symphonie-de-la-nostalgie-shimomura-et-kingdom-hearts"]
 ---
 

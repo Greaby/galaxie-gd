@@ -1,6 +1,6 @@
 ---
-authors: [Sofia (Game Spectrum)]
-tags:
+author: [Sofia (Game Spectrum)]
+tag:
     [
         Casual,
         Inside,

@@ -1,6 +1,6 @@
 ---
-authors: [At0mium]
-tags:
+author: [At0mium]
+tag:
     [
         Metroid,
         Metroid Dread,

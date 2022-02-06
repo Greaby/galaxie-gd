@@ -1,6 +1,6 @@
 ---
-authors: [Doc Geraud]
-tags:
+author: [Doc Geraud]
+tag:
     [
         Knockout City,
         Sound design,

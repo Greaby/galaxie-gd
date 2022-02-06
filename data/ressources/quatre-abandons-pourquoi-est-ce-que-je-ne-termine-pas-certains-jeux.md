@@ -1,6 +1,6 @@
 ---
-authors: [Lys Sombreciel]
-tags:
+author: [Lys Sombreciel]
+tag:
     [
         Abandon,
         Streets of Rage 4,

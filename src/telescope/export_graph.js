@@ -2,7 +2,7 @@ const calculate_force_atlas = require("./calculate_force_atlas");
 
 module.exports = (graph) => {
     graph.forEachNode((node, attributes) => {
-        if (attributes.isolated) {
+        if (attributes.hidden) {
             graph.dropNode(node);
         }
     });
@@ -10,7 +10,7 @@ module.exports = (graph) => {
     calculate_force_atlas(graph);
 
     // Optimization of the JSON file size
-    graph.forEachNode((node, _attr) => {
+    graph.forEachNode((node, _attributes) => {
         graph.removeNodeAttribute(node, "pagerank");
         graph.updateNodeAttribute(node, "x", (x) => Math.round(x));
         graph.updateNodeAttribute(node, "y", (y) => Math.round(y));

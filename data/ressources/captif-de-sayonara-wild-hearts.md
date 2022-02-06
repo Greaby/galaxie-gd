@@ -1,6 +1,6 @@
 ---
-authors: [Pier -re]
-tags:
+author: [Pier -re]
+tag:
     [
         Sayonara Wild Hearts,
         Addiction,

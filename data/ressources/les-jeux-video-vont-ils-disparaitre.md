@@ -1,6 +1,6 @@
 ---
-authors: [Sofia (Game Spectrum)]
-tags: [Écologie]
+author: [Sofia (Game Spectrum)]
+tag: [Écologie]
 ---
 
 # Les jeux vidéo vont-ils disparaître ?

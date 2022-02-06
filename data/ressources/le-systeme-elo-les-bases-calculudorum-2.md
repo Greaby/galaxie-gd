@@ -1,6 +1,6 @@
 ---
-authors: [Sliverik]
-tags:
+author: [Sliverik]
+tag:
     [
         Elo,
         Système de classement,

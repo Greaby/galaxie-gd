@@ -1,6 +1,6 @@
 ---
-authors: [Ex Serv]
-tags:
+author: [Ex Serv]
+tag:
     [
         Metacritic,
         Test de jeu,

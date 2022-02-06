@@ -1,6 +1,6 @@
 ---
-authors: [Pier -re]
-tags:
+author: [Pier -re]
+tag:
     [
         "The Legend of Zelda: Breath of the Wild",
         Open world,

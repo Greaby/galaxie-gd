@@ -1,6 +1,6 @@
 ---
-authors: [Sofia (Game Spectrum)]
-tags: [Sonic Mania, Sonic]
+author: [Sofia (Game Spectrum)]
+tag: [Sonic Mania, Sonic]
 ---
 
 # Sonic Mania - L'abandon consenti du joueur

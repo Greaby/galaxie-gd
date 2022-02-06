@@ -1,6 +1,6 @@
 ---
-authors: [Archipel]
-tags: [Shinji Mikami, Interview]
+author: [Archipel]
+tag: [Shinji Mikami, Interview]
 ---
 
 # Shinji Mikami, 2ème partie : un voyage éclectique - Archipel Caravan

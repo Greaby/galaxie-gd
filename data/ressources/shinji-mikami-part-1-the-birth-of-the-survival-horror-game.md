@@ -1,6 +1,6 @@
 ---
-authors: [Archipel]
-tags: [Shinji Mikami, Interview]
+author: [Archipel]
+tag: [Shinji Mikami, Interview]
 ---
 
 # Shinji Mikami, 1ère partie : la naissance du jeu de survie et d'horreur - Archipel Caravan

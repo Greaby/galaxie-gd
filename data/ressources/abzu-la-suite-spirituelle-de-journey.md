@@ -1,6 +1,6 @@
 ---
-authors: [Toujours Thomas]
-tags:
+author: [Toujours Thomas]
+tag:
     [
         Abzû,
         Journey,
