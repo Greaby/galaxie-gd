@@ -1,5 +1,5 @@
 ---
-author: [Lys Sombreciel]
+author: Lys Sombreciel
 tag:
     [
         "Greak: Memories of Azur",

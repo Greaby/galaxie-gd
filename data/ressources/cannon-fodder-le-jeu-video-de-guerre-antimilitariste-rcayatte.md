@@ -1,5 +1,5 @@
 ---
-author: [Romain Vincent]
+author: Romain Vincent
 tag: [Cannon Fodder, Guerre, Antimilitarisme, Call of Duty, Historique]
 citations:
     [

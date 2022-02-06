@@ -1,5 +1,5 @@
 ---
-author: [Doc Geraud]
+author: Doc Geraud
 tag:
     [
         Knockout City,
