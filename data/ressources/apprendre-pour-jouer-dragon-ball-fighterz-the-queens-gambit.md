@@ -18,7 +18,7 @@ tag:
         Le Jeu de la dame,
         Stratégie,
     ]
-citation: ["ressource:ce-que-les-designers-nous-cachent-game-next-door"]
+citations: ["ressource:ce-que-les-designers-nous-cachent-game-next-door"]
 ---
 
 # Apprendre pour jouer : Dragon Ball Fighterz - The Queen's Gambit
