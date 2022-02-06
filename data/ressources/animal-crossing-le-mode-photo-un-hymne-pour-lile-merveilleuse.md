@@ -3,7 +3,7 @@ author: Lys Sombreciel
 tag:
     [
         "Animal Crossing: New Horizons",
-        Nitendo,
+        Nintendo,
         Mode photo,
         Ambiance,
         Contemplation,
