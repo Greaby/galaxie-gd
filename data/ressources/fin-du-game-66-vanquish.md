@@ -12,7 +12,7 @@ tag:
     ]
 citations:
     [
-        "ressource:fin-du-game-episode-22-resident-evil-2-remake",
+        "ressource:fin-du-game-22-resident-evil-2-remake",
         "ressource:shinji-mikami-part-1-the-birth-of-the-survival-horror-game",
         "ressource:shinji-mikami-part-2-an-eclectic-journey",
     ]

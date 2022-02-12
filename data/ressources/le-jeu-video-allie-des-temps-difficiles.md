@@ -2,6 +2,7 @@
 author: [NostalGeek]
 tag: [
         Soutien Psychologique,
+        Animal Crossing,
         "Animal Crossing: New Horizons",
         Nintendo,
         Évasion,

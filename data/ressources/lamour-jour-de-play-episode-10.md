@@ -28,7 +28,7 @@ tag:
         Jeu coopératif,
         Multijoueur,
         It Takes Two,
-        Hazelight,
+        Hazelight Studios,
         Josef Fares,
         Accessibilité,
         Nova-box,

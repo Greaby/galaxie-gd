@@ -5,7 +5,7 @@ tag:
         "Greak: Memories of Azur",
         Navegante,
         Trine 2,
-        It takes two,
+        It Takes Two,
         Metroidvania,
         Plateformer 2D,
         Gameplay,

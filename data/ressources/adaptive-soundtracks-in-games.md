@@ -4,6 +4,7 @@ tag:
     [
         Musique,
         Effets sonores,
+        Sound design,
         Audio adaptatif,
         Nintendo,
         Mario,

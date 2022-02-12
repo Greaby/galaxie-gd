@@ -2,6 +2,7 @@
 author: Lys Sombreciel
 tag:
     [
+        Animal Crossing,
         "Animal Crossing: New Horizons",
         Nintendo,
         Mode photo,
